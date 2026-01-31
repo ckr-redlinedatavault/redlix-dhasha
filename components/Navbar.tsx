@@ -18,7 +18,7 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Our Story', href: '/our-story' },
     { name: 'Our Ecosystem', href: '/our-ecosystem' },
-    { name: 'Creators', href: '/creators' },
+    { name: 'Creators', href: '/join-creator' },
     { name: 'How it works', href: '/how-it-works' },
   ];
 
