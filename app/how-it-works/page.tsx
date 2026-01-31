@@ -80,11 +80,11 @@ export default function HowItWorks() {
             {/* Hero Section */}
             <section className="pt-40 pb-16 px-6 text-center relative z-10">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#DAC291]/10 rounded-full blur-[140px] pointer-events-none"></div>
-                <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+                <h1 className="text-4xl md:text-6xl font-medium mb-6 tracking-tight">
                     Capture Life's Moments in <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B89E6C] via-[#DAC291] to-[#EAD7B0]">3 Simple Steps!</span>
                 </h1>
-                <p className="text-gray-400 max-w-xl mx-auto font-light leading-relaxed">
+                <p className="text-sm md:text-base text-gray-400 max-w-xl mx-auto font-light leading-relaxed">
                     Whether you're looking to capture memories or monetize your talent, Dhasha Media connects the dots seamlessly.
                 </p>
             </section>
@@ -127,8 +127,8 @@ export default function HowItWorks() {
                                     <div className="w-14 h-14 bg-gradient-to-br from-[#B89E6C] to-[#EAD7B0] rounded-2xl flex items-center justify-center text-black mb-8 shadow-lg shadow-[#DAC291]/10">
                                         {step.icon}
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
-                                    <p className="text-gray-400 font-light leading-relaxed">
+                                    <h3 className="text-xl font-bold mb-4">{step.title}</h3>
+                                    <p className="text-xs md:text-sm text-gray-400 font-light leading-relaxed">
                                         {step.desc}
                                     </p>
                                 </div>
@@ -142,10 +142,10 @@ export default function HowItWorks() {
             <section className="py-24 px-6 bg-zinc-900/20 border-t border-white/5">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
-                        <span className="inline-block px-4 py-1.5 rounded-full border border-[#DAC291]/30 bg-[#DAC291]/5 text-[#DAC291] text-xs font-bold uppercase tracking-widest mb-6">
+                        <span className="inline-block px-4 py-1.5 rounded-full border border-[#DAC291]/30 bg-[#DAC291]/5 text-[#DAC291] text-[10px] font-bold uppercase tracking-widest mb-6">
                             Maximize Your Experience
                         </span>
-                        <h2 className="text-3xl md:text-4xl font-bold">Pro Tips for Success</h2>
+                        <h2 className="text-2xl md:text-4xl font-bold tracking-tight">Pro Tips for Success</h2>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-12">
@@ -154,13 +154,13 @@ export default function HowItWorks() {
                             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-[80px]"></div>
                             <div className="flex items-center gap-4 mb-8">
                                 <div className="p-3 bg-zinc-900 rounded-xl text-white"><Star size={24} /></div>
-                                <h3 className="text-2xl font-bold">For Customers</h3>
+                                <h3 className="text-xl font-bold">For Customers</h3>
                             </div>
                             <ul className="space-y-6">
                                 {customerTips.map((tip, i) => (
                                     <li key={i} className="flex items-start gap-4">
                                         <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#DAC291] shrink-0"></div>
-                                        <p className="text-gray-400 font-light leading-relaxed">{tip}</p>
+                                        <p className="text-xs md:text-sm text-gray-400 font-light leading-relaxed">{tip}</p>
                                     </li>
                                 ))}
                             </ul>
@@ -171,13 +171,13 @@ export default function HowItWorks() {
                             <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/5 rounded-full blur-[80px]"></div>
                             <div className="flex items-center gap-4 mb-8">
                                 <div className="p-3 bg-zinc-900 rounded-xl text-white"><Lightbulb size={24} /></div>
-                                <h3 className="text-2xl font-bold">For Creators</h3>
+                                <h3 className="text-xl font-bold">For Creators</h3>
                             </div>
                             <ul className="space-y-6">
                                 {creatorTips.map((tip, i) => (
                                     <li key={i} className="flex items-start gap-4">
                                         <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#DAC291] shrink-0"></div>
-                                        <p className="text-gray-400 font-light leading-relaxed">{tip}</p>
+                                        <p className="text-xs md:text-sm text-gray-400 font-light leading-relaxed">{tip}</p>
                                     </li>
                                 ))}
                             </ul>
