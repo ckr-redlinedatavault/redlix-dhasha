@@ -1,0 +1,71 @@
+
+> my-app@0.1.0 lint
+> eslint
+
+
+/Users/rishirohankalapala/Desktop/dhasha-web/my-app/app/blog/page.tsx
+   7:8   warning  'Link' is defined but never used                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+  72:41  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/rishirohankalapala/Desktop/dhasha-web/my-app/app/contact/page.tsx
+  6:16  warning  'Phone' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/rishirohankalapala/Desktop/dhasha-web/my-app/app/how-it-works/page.tsx
+   7:75  warning  'ShieldCheck' is defined but never used                          @typescript-eslint/no-unused-vars
+   7:88  warning  'Clock' is defined but never used                                @typescript-eslint/no-unused-vars
+  84:33  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  88:32  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/rishirohankalapala/Desktop/dhasha-web/my-app/app/join-creator/page.tsx
+    6:18   warning  'Check' is defined but never used                                @typescript-eslint/no-unused-vars
+    6:25   warning  'ArrowRight' is defined but never used                           @typescript-eslint/no-unused-vars
+   94:42   error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  119:113  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/rishirohankalapala/Desktop/dhasha-web/my-app/app/terms/page.tsx
+  27:184  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  27:188  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  27:190  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  27:193  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  27:198  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  27:202  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+/Users/rishirohankalapala/Desktop/dhasha-web/my-app/components/AppSection.tsx
+  62:41  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  71:41  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  88:29  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  97:29  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/rishirohankalapala/Desktop/dhasha-web/my-app/components/ChatWidget.tsx
+  65:17  error  Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+/Users/rishirohankalapala/Desktop/dhasha-web/my-app/components/ChatWidget.tsx:65:17
+  63 |
+  64 |         const newUserMessage: Message = {
+> 65 |             id: Date.now(),
+     |                 ^^^^^^^^^^ Cannot call impure function
+  66 |             text: text,
+  67 |             sender: 'user',
+  68 |         };  react-hooks/purity
+
+/Users/rishirohankalapala/Desktop/dhasha-web/my-app/components/Footer.tsx
+  24:29  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/rishirohankalapala/Desktop/dhasha-web/my-app/components/Navbar.tsx
+   32:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  129:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  138:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/rishirohankalapala/Desktop/dhasha-web/my-app/components/SocialProof.tsx
+  42:29  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/rishirohankalapala/Desktop/dhasha-web/my-app/components/Testimonial.tsx
+  43:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/rishirohankalapala/Desktop/dhasha-web/my-app/components/WhyChooseUs.tsx
+  76:37  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+✖ 29 problems (11 errors, 18 warnings)
+
