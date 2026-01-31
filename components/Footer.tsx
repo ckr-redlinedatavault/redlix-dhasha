@@ -54,12 +54,12 @@ export default function Footer() {
                     {/* Links Groups */}
                     <div className="grid grid-cols-2 md:grid-cols-3 col-span-1 lg:col-span-3 gap-12">
                         <div>
-                            <h3 className="text-black text-[10px] font-black uppercase tracking-[0.3em] mb-8 opacity-40">Services</h3>
+                            <h3 className="text-black text-[10px] font-black uppercase tracking-[0.3em] mb-8 opacity-40">Resources</h3>
                             <ul className="space-y-4 text-sm font-bold text-black/70">
-                                <li><Link href="#" className="hover:text-black transition-colors underline-offset-4 hover:underline">Reel Production</Link></li>
-                                <li><Link href="#" className="hover:text-black transition-colors underline-offset-4 hover:underline">AI Color Grading</Link></li>
-                                <li><Link href="#" className="hover:text-black transition-colors underline-offset-4 hover:underline">Script Writing</Link></li>
-                                <li><Link href="#" className="hover:text-black transition-colors underline-offset-4 hover:underline">Podcast Slicing</Link></li>
+                                <li><Link href="/privacy" className="hover:text-black transition-colors underline-offset-4 hover:underline">Privacy Policy</Link></li>
+                                <li><Link href="/terms" className="hover:text-black transition-colors underline-offset-4 hover:underline">Terms of Service</Link></li>
+
+                                <li><Link href="/cookies" className="hover:text-black transition-colors underline-offset-4 hover:underline">Cookie Policy</Link></li>
                             </ul>
                         </div>
 
@@ -68,7 +68,7 @@ export default function Footer() {
                             <ul className="space-y-4 text-sm font-bold text-black/70">
                                 <li><Link href="/our-story" className="hover:text-black transition-colors underline-offset-4 hover:underline">Our Story</Link></li>
                                 <li><Link href="/join-creator" className="hover:text-black transition-colors underline-offset-4 hover:underline">Join as Creator</Link></li>
-                                <li><Link href="#" className="hover:text-black transition-colors underline-offset-4 hover:underline">Brand Assets</Link></li>
+
                                 <li><Link href="/contact" className="hover:text-black transition-colors underline-offset-4 hover:underline">Contact Us</Link></li>
                             </ul>
                         </div>
@@ -94,10 +94,7 @@ export default function Footer() {
                         <p className="text-[10px] text-black/50 tracking-widest uppercase font-black">
                             &copy; {currentYear} Dhasha Media.
                         </p>
-                        <div className="flex gap-6">
-                            <Link href="#" className="text-[10px] text-black/40 hover:text-black transition-colors uppercase tracking-widest font-black">Privacy Policy</Link>
-                            <Link href="#" className="text-[10px] text-black/40 hover:text-black transition-colors uppercase tracking-widest font-black">Terms of Service</Link>
-                        </div>
+                        {/* Links moved to main column */}
                     </div>
 
                     <div className="text-[10px] text-black/30 tracking-[0.6em] uppercase font-black">
