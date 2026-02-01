@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { Bricolage_Grotesque } from 'next/font/google';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const bricolage = Bricolage_Grotesque({
     subsets: ['latin'],
@@ -17,7 +18,7 @@ const initialCards = [
     },
     {
         id: 'v2',
-        name: 'Product Launch',
+        name: 'Product',
         video: 'https://res.cloudinary.com/dsqqrpzfl/video/upload/v1769869357/WhatsApp_Video_2026-01-31_at_19.49.06_a5a7l1.mp4',
     },
     {
@@ -32,9 +33,10 @@ const initialCards = [
     },
     {
         id: 'v5',
-        name: 'Product Launch',
-        video: 'https://res.cloudinary.com/dsqqrpzfl/video/upload/v1769869344/WhatsApp_Video_2026-01-31_at_19.49.03_wzzt0w.mp4',
+        name: 'Corporate',
+        video: 'https://res.cloudinary.com/dsqqrpzfl/video/upload/v1769963995/WhatsApp_Video_2026-02-01_at_22.08.32_kcvit1.mp4',
     },
+
 ];
 
 export default function HeroWithCards() {
@@ -42,11 +44,20 @@ export default function HeroWithCards() {
     const middleIndex = Math.floor(cards.length / 2);
     const videoRefs = useRef<{ [key: string]: HTMLVideoElement }>({});
 
-    const rotateCards = () => {
+    const rotateNext = () => {
         setCards(prev => {
             const newCards = [...prev];
             const first = newCards.shift();
             if (first) newCards.push(first);
+            return newCards;
+        });
+    };
+
+    const rotatePrev = () => {
+        setCards(prev => {
+            const newCards = [...prev];
+            const last = newCards.pop();
+            if (last) newCards.unshift(last);
             return newCards;
         });
     };
@@ -68,7 +79,7 @@ export default function HeroWithCards() {
             videoEl.play().catch(e => {
                 console.log("Autoplay prevented:", e);
                 // Fallback: If autoplay fails (e.g. low power mode), rotate after 5s so it doesn't get stuck.
-                fallbackTimer = setTimeout(rotateCards, 5000);
+                fallbackTimer = setTimeout(rotateNext, 5000);
             });
         }
 
@@ -91,7 +102,7 @@ export default function HeroWithCards() {
     const handleVideoEnded = (index: number) => {
         // Only trigger shuffle if the CENTER video ends
         if (index === middleIndex) {
-            rotateCards();
+            rotateNext();
         }
     };
 
@@ -197,6 +208,24 @@ export default function HeroWithCards() {
                             </div>
                         );
                     })}
+                </div>
+
+                {/* Navigation Buttons */}
+                <div className="absolute bottom-8 right-8 flex items-center gap-4 z-50">
+                    <button
+                        onClick={rotatePrev}
+                        className="p-3 rounded-full border border-[#DAC291]/30 bg-black/50 hover:bg-[#DAC291]/10 text-[#DAC291] transition-all duration-300 hover:scale-110 backdrop-blur-sm group"
+                        aria-label="Previous Video"
+                    >
+                        <ChevronLeft className="w-6 h-6 group-hover:-translate-x-0.5 transition-transform" />
+                    </button>
+                    <button
+                        onClick={rotateNext}
+                        className="p-3 rounded-full border border-[#DAC291]/30 bg-black/50 hover:bg-[#DAC291]/10 text-[#DAC291] transition-all duration-300 hover:scale-110 backdrop-blur-sm group"
+                        aria-label="Next Video"
+                    >
+                        <ChevronRight className="w-6 h-6 group-hover:translate-x-0.5 transition-transform" />
+                    </button>
                 </div>
 
             </div>
