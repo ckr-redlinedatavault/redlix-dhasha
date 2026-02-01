@@ -63,20 +63,20 @@ export default function WhyChooseUs() {
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            className="relative h-52 flex items-center group overflow-hidden rounded-[2.5rem]"
+                            className="relative h-auto md:h-52 flex flex-col md:flex-row items-center group overflow-hidden rounded-[2rem] md:rounded-[2.5rem]"
                         >
                             {/* THE GOLD CARD (The "Stage") */}
                             {/* We use absolute inset-0 to fill the container but keep the image "free" */}
-                            <div className="absolute inset-0 w-full bg-gradient-to-r from-[#B89E6C] via-[#DAC291] to-[#EAD7B0] rounded-[2.5rem] shadow-xl z-0 transition-all duration-500 group-hover:shadow-[#DAC291]/20 group-hover:shadow-2xl" />
+                            <div className="absolute inset-0 w-full bg-gradient-to-r from-[#B89E6C] via-[#DAC291] to-[#EAD7B0] rounded-[2rem] md:rounded-[2.5rem] shadow-xl z-0 transition-all duration-500 group-hover:shadow-[#DAC291]/20 group-hover:shadow-2xl" />
 
-                            <div className="relative z-10 w-full h-full flex items-center">
+                            <div className="relative z-10 w-full h-full flex flex-col md:flex-row items-center">
 
                                 {/* IMAGE CONTAINER */}
-                                <div className="w-[50%] h-full relative pointer-events-none">
+                                <div className="w-full md:w-[50%] h-48 md:h-full relative pointer-events-none order-2 md:order-1">
                                     <img
                                         src={feature.image}
                                         alt={feature.title}
-                                        className="absolute inset-0 w-full h-full object-contain object-bottom grayscale brightness-110"
+                                        className="absolute inset-x-0 bottom-0 mx-auto md:inset-0 w-auto h-full md:w-full md:h-full object-contain object-bottom grayscale brightness-110"
                                         style={{
                                             filter: 'grayscale(100%) contrast(110%)',
                                         }}
@@ -84,7 +84,7 @@ export default function WhyChooseUs() {
                                 </div>
 
                                 {/* TEXT CONTENT */}
-                                <div className="w-[50%] pr-6 pl-0 py-4 flex flex-col justify-center">
+                                <div className="w-full md:w-[50%] px-6 pt-6 pb-2 md:py-4 md:pl-0 md:pr-6 flex flex-col justify-center text-center md:text-left order-1 md:order-2">
                                     <h3 className="text-xl md:text-2xl font-bold text-black mb-2 leading-tight tracking-tight">
                                         {feature.title}
                                     </h3>
