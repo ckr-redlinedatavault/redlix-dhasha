@@ -136,7 +136,7 @@ export default function HeroWithCards() {
                 </div>
 
                 {/* CARDS SECTION */}
-                <div className="flex flex-row items-center justify-center gap-2 md:gap-8 lg:gap-12 mt-12 md:mt-24 w-full min-h-[400px] md:min-h-[600px] lg:min-h-[700px]">
+                <div className="flex flex-row items-center justify-center gap-1 md:gap-8 lg:gap-12 mt-12 md:mt-24 w-full min-h-[400px] md:min-h-[600px] lg:min-h-[700px]">
                     {cards.map((card, index) => {
                         const isCenter = index === middleIndex;
                         const distFromCenter = Math.abs(index - middleIndex);
@@ -146,18 +146,18 @@ export default function HeroWithCards() {
                         // 1 -> medium
                         // 2 -> small
 
-                        let widthClass = 'w-20 md:w-32 lg:w-40'; // Default small
+                        let widthClass = 'w-14 md:w-32 lg:w-40'; // Default small
                         let opacityClass = 'opacity-30';
                         let zIndex = 10;
                         let scaleClass = 'scale-90';
 
                         if (isCenter) {
-                            widthClass = 'w-56 md:w-80 lg:w-96';
+                            widthClass = 'w-48 md:w-80 lg:w-96';
                             opacityClass = 'opacity-100';
                             zIndex = 30;
                             scaleClass = 'scale-110';
                         } else if (distFromCenter === 1) {
-                            widthClass = 'w-32 md:w-48 lg:w-56';
+                            widthClass = 'w-24 md:w-48 lg:w-56';
                             opacityClass = 'opacity-60';
                             zIndex = 20;
                             scaleClass = 'scale-100';
@@ -211,7 +211,7 @@ export default function HeroWithCards() {
                 </div>
 
                 {/* Navigation Buttons */}
-                <div className="absolute bottom-8 right-8 flex items-center gap-4 z-50">
+                <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 flex items-center gap-4 z-50">
                     <button
                         onClick={rotatePrev}
                         className="p-3 rounded-full border border-[#DAC291]/30 bg-black/50 hover:bg-[#DAC291]/10 text-[#DAC291] transition-all duration-300 hover:scale-110 backdrop-blur-sm group"
