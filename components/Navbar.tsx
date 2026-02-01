@@ -16,9 +16,11 @@ export default function Navbar() {
   const [showAppModal, setShowAppModal] = useState(false);
 
   const navLinks = [
+    { name: 'Home', href: '/' },
     { name: 'Our Story', href: '/our-story' },
     { name: 'Our Ecosystem', href: '/our-ecosystem' },
-    { name: 'Creators', href: '/join-creator' },
+    { name: 'Creators', href: '/creators' },
+    { name: 'Studio', href: '/studio' },
     { name: 'How it works', href: '/how-it-works' },
   ];
 
