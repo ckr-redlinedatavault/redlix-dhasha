@@ -107,7 +107,7 @@ export default function HeroWithCards() {
     };
 
     return (
-        <section className={`${bricolage.className} relative z-0 min-h-screen bg-black overflow-hidden flex flex-col items-center pt-40 pb-12`}>
+        <section className={`${bricolage.className} relative z-0 min-h-screen bg-black overflow-hidden flex flex-col items-center pt-28 md:pt-40 pb-12`}>
 
             {/* Background Ambient Glow */}
             <div className="absolute inset-0 z-0 pointer-events-none">
@@ -129,14 +129,14 @@ export default function HeroWithCards() {
                 </h1>
 
                 {/* LINE 3: The Gold Highlight (Large Scale) */}
-                <div className="mb-16">
+                <div className="mb-8 md:mb-16">
                     <h2 className="text-4xl md:text-7xl lg:text-[8rem] font-bold tracking-tighter bg-gradient-to-r from-[#B89E6C] via-[#DAC291] to-[#EAD7B0] bg-clip-text text-transparent leading-none">
                         10 Minutes<span className="text-[#EAD7B0] font-extralight text-[0.4em] align-top">*</span>
                     </h2>
                 </div>
 
                 {/* CARDS SECTION */}
-                <div className="flex flex-row items-center justify-center gap-1 md:gap-8 lg:gap-12 mt-12 md:mt-24 w-full min-h-[400px] md:min-h-[600px] lg:min-h-[700px]">
+                <div className="flex flex-row items-center justify-center gap-0 md:gap-8 lg:gap-12 mt-8 md:mt-24 w-full min-h-[350px] md:min-h-[600px] lg:min-h-[700px]">
                     {cards.map((card, index) => {
                         const isCenter = index === middleIndex;
                         const distFromCenter = Math.abs(index - middleIndex);
