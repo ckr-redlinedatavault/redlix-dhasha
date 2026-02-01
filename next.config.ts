@@ -10,6 +10,18 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'airiamall.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'vectorseek.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'emmadisilverjewellery.com',
+      },
+      {
+        protocol: 'https',
         hostname: 'images.pexels.com',
       },
       {
