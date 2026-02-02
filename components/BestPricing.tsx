@@ -89,7 +89,7 @@ export default function Pricing() {
                                 ))}
                             </ul>
 
-                            <Link href="/contact" className={`block w-full text-center py-4 rounded-full font-bold uppercase tracking-widest text-[10px] transition-all duration-300 ${plan.isPopular
+                            <Link href="https://bookings.dhashamedia.com/contact" className={`block w-full text-center py-4 rounded-full font-bold uppercase tracking-widest text-[10px] transition-all duration-300 ${plan.isPopular
                                 ? 'bg-gradient-to-r from-[#B89E6C] to-[#DAC291] text-black hover:opacity-90 shadow-lg shadow-[#DAC291]/10'
                                 : 'bg-white/10 text-white hover:bg-white/20'
                                 }`}>
