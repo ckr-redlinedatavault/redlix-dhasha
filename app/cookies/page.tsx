@@ -34,7 +34,7 @@ export default function Cookies() {
                         {/* Introduction */}
                         <section className="bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-sm hover:border-[#DAC291]/30 transition-colors duration-500">
                             <p className="mb-4">
-                                This Cookie Policy explains how DHA Media Private Limited uses cookies and similar technologies to recognize you when you visit our website at <a href="https://www.dhashamedia.com/" className="text-[#DAC291] hover:underline underline-offset-4 decoration-[#DAC291]/50">https://www.dhashamedia.com/</a>. It explains what these technologies are and why we use them, as well as your rights to control our use of them.
+                                This Cookie Policy explains how Dhasha Media uses cookies and similar technologies to recognize you when you visit our website at <a href="https://www.dhashamedia.com/" className="text-[#DAC291] hover:underline underline-offset-4 decoration-[#DAC291]/50">https://www.dhashamedia.com/</a>. It explains what these technologies are and why we use them, as well as your rights to control our use of them.
                             </p>
                         </section>
 
@@ -47,7 +47,7 @@ export default function Cookies() {
                                 Cookies are small data files that are placed on your computer or mobile device when you visit a website. Cookies are widely used by website owners in order to make their websites work, or to work more efficiently, as well as to provide reporting information.
                             </p>
                             <p>
-                                Cookies set by the website owner (in this case, DHA Media) are called "first-party cookies". Cookies set by parties other than the website owner are called "third-party cookies". Third-party cookies enable third-party features or functionality to be provided on or through the website (e.g., advertising, interactive content, and analytics).
+                                Cookies set by the website owner (in this case, Dhasha Media) are called "first-party cookies". Cookies set by parties other than the website owner are called "third-party cookies". Third-party cookies enable third-party features or functionality to be provided on or through the website (e.g., advertising, interactive content, and analytics).
                             </p>
                         </section>
 
