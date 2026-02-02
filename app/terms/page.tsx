@@ -35,7 +35,7 @@ export default function Terms() {
                         <section className="bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-sm hover:border-[#DAC291]/30 transition-colors duration-500">
                             <h2 className="text-white text-2xl font-bold mb-4">1. Agreement to Terms</h2>
                             <p>
-                                These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and <strong className="text-white">DHA Media Private Limited</strong> ("DHA Media", "we", "us", or "our"), concerning your access to and use of the <a href="https://www.dhashamedia.com/" className="text-[#DAC291] hover:underline decoration-[#DAC291]/50 underline-offset-4">https://www.dhashamedia.com/</a> website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”).
+                                These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and <strong className="text-white">Dhasha Media</strong> ("Dhasha Media", "we", "us", or "our"), concerning your access to and use of the <a href="https://www.dhashamedia.com/" className="text-[#DAC291] hover:underline decoration-[#DAC291]/50 underline-offset-4">https://www.dhashamedia.com/</a> website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the “Site”).
                             </p>
                             <p className="mt-4">
                                 By accessing the Site, you confirm that you have read, understood, and agreed to be bound by all of these Terms of Service. If you do not agree with all of these terms, then you are expressly prohibited from using the Site and must discontinue use immediately.
@@ -49,21 +49,21 @@ export default function Terms() {
                                 2. Our Services
                             </h2>
                             <p className="mb-6">
-                                DHA Media is a comprehensive 10-in-1 integrated media company. By engaging with us, you may avail any of the following premium services:
+                                Dhasha Media is a comprehensive 10-in-1 integrated media company. By engaging with us, you may avail any of the following premium services:
                             </p>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {[
-                                    "Digital Marketing",
-                                    "Branding",
-                                    "Web Development",
-                                    "App Development",
-                                    "Content Creation",
-                                    "Advertising",
-                                    "Design",
-                                    "Social Media Management",
-                                    "Analytics",
-                                    "Media Consulting"
+                                    "Reels shoot",
+                                    "YouTube Vlogs & Shorts",
+                                    "Podcast Production",
+                                    "News & Media",
+                                    "Creators Hub",
+                                    "Business Collabs",
+                                    "Brand Marketing",
+                                    "Cinematic Weddings",
+                                    "Event Coverage",
+                                    "Creative Formats"
                                 ].map((service, index) => (
                                     <div key={index} className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.03] border border-white/5 hover:bg-white/[0.05] hover:border-[#DAC291]/30 transition-all duration-300 group">
                                         <div className="w-10 h-10 rounded-full bg-[#DAC291]/10 flex items-center justify-center text-[#DAC291] font-bold group-hover:bg-[#DAC291] group-hover:text-black transition-all">
@@ -121,7 +121,7 @@ export default function Terms() {
                                 6. Governing Law
                             </h2>
                             <p>
-                                These Terms shall be governed by and defined following the laws of India. DHA Media Private Limited and yourself irrevocably consent that the courts of India shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these terms.
+                                These Terms shall be governed by and defined following the laws of India. Dhasha Media and yourself irrevocably consent that the courts of India shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these terms.
                             </p>
                         </section>
 
@@ -132,8 +132,8 @@ export default function Terms() {
                                 In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at:
                             </p>
                             <div className="flex flex-col items-center gap-2">
-                                <strong className="text-xl text-[#DAC291]">DHA Media Private Limited</strong>
-                                <a href="mailto:hello@dhashamedia.com" className="text-white hover:text-[#DAC291] transition-colors">hello@dhashamedia.com</a>
+                                <strong className="text-xl text-[#DAC291]">Dhasha Media</strong>
+                                <a href="mailto:dhashamedia07@gmail.com" className="text-white hover:text-[#DAC291] transition-colors">dhashamedia07@gmail.com</a>
                             </div>
                         </section>
 
@@ -150,3 +150,4 @@ export default function Terms() {
         </main>
     );
 }
+
