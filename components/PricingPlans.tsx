@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Check, Sparkles, Zap } from 'lucide-react';
 import { Bricolage_Grotesque } from 'next/font/google';
+import Link from 'next/link';
 
 const bricolage = Bricolage_Grotesque({
     subsets: ['latin'],
@@ -117,14 +118,15 @@ export default function PricingPlans() {
                                 ))}
                             </ul>
 
-                            <button
-                                className={`w-full py-4 rounded-full font-bold text-[11px] uppercase tracking-[0.2em] transition-all ${plan.popular
+                            <Link
+                                href="https://bookings.dhashamedia.com/contact"
+                                className={`block w-full text-center py-4 rounded-full font-bold text-[11px] uppercase tracking-[0.2em] transition-all ${plan.popular
                                     ? 'bg-black text-[#DAC291] hover:bg-zinc-800 shadow-xl'
                                     : 'bg-white/5 border border-[#DAC291]/20 text-[#DAC291] hover:bg-[#DAC291]/5'
                                     }`}
                             >
                                 Get Started
-                            </button>
+                            </Link>
                         </div>
                     ))}
                 </div>
