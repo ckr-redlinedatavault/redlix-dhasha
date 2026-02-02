@@ -20,9 +20,12 @@ export default function AppSection() {
                     {/* Left Content Side */}
                     <div className="flex flex-col items-start">
                         {/* Download Badge */}
-                        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[#DAC291] text-[10px] font-bold uppercase tracking-[0.3em] mb-6">
-                            <Download size={12} />
-                            <span>Download Now</span>
+                        <div className="flex flex-wrap gap-4 mb-6">
+                            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[#DAC291] text-[10px] font-bold uppercase tracking-[0.3em]">
+                                <Download size={12} />
+                                <span>Coming Soon</span>
+                            </div>
+
                         </div>
 
                         {/* Heading - Reduced Margin */}
