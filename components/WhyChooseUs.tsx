@@ -2,6 +2,7 @@
 
 import { Sparkles } from 'lucide-react';
 import { Bricolage_Grotesque } from 'next/font/google';
+import Link from 'next/link';
 
 const bricolage = Bricolage_Grotesque({
     subsets: ['latin'],
@@ -96,6 +97,16 @@ export default function WhyChooseUs() {
                             </div>
                         </div>
                     ))}
+                </div>
+
+                {/* Book Creator Button */}
+                <div className="mt-16 text-center">
+                    <Link
+                        href="https://bookings.dhashamedia.com/booking/7bee9ed4-6530-4e3d-b89e-98356b0bf47e"
+                        className="inline-block bg-gradient-to-r from-[#B89E6C] to-[#DAC291] text-black px-12 py-5 rounded-full font-bold text-sm uppercase tracking-widest hover:scale-105 transition-transform shadow-xl shadow-[#DAC291]/20"
+                    >
+                        Book Creator
+                    </Link>
                 </div>
 
 
