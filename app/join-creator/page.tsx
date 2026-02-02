@@ -96,8 +96,8 @@ export default function JoinCreator() {
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
-                            href="#"
-                            className="bg-gradient-to-r from-red-600 to-red-700 text-white px-10 py-4 rounded-full font-bold text-sm tracking-widest hover:brightness-110 transition-all shadow-lg shadow-red-900/20 flex items-center justify-center gap-2"
+                            href="https://bookings.dhashamedia.com/join-creator"
+                            className="bg-gradient-to-r from-[#B89E6C] to-[#DAC291] text-black px-10 py-4 rounded-full font-bold text-sm tracking-widest hover:brightness-110 transition-all shadow-lg shadow-[#DAC291]/20 flex items-center justify-center gap-2"
                         >
                             Apply Now <ExternalLink size={16} />
                         </a>
@@ -198,9 +198,12 @@ export default function JoinCreator() {
                         <p className="text-gray-400 font-light mb-10 max-w-xl mx-auto">
                             The application takes less than 5 minutes. Join hundreds of creators earning on Dhasha Media today.
                         </p>
-                        <button className="bg-[#DAC291] text-black px-12 py-5 rounded-full font-bold text-sm uppercase tracking-widest hover:scale-105 transition-transform shadow-xl shadow-[#DAC291]/20">
+                        <a
+                            href="https://bookings.dhashamedia.com/join-creator"
+                            className="inline-block bg-gradient-to-r from-[#B89E6C] to-[#DAC291] text-black px-12 py-5 rounded-full font-bold text-sm uppercase tracking-widest hover:scale-105 transition-transform shadow-xl shadow-[#DAC291]/20"
+                        >
                             Apply Now
-                        </button>
+                        </a>
                     </div>
                 </div>
             </section>
