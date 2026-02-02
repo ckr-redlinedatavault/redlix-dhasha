@@ -25,7 +25,7 @@ export default function Privacy() {
                             Privacy Policy
                         </h1>
                         <p className="text-gray-400 text-lg md:text-xl font-light max-w-2xl leading-relaxed">
-                            Transparency is our core value. This policy outlines how DHA Media protects your data and privacy.
+                            Transparency is our core value. This policy outlines how Dhasha Media protects your data and privacy.
                         </p>
                     </header>
 
@@ -34,21 +34,21 @@ export default function Privacy() {
                         {/* Introduction */}
                         <section className="bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-sm hover:border-[#DAC291]/30 transition-colors duration-500">
                             <p className="mb-6">
-                                This Privacy Policy explains how <strong className="text-white">DHA Media Private Limited</strong> (hereinafter referred to as “DHA Media,” “We,” “Us,” or “Our”) collects, uses, processes, stores, shares, and protects information belonging to users (“You,” “Your,” or “Users”) who access or use our services through our website <a href="https://www.dhashamedia.com/" className="text-[#DAC291] hover:underline underline-offset-4 decoration-[#DAC291]/50">https://www.dhashamedia.com/</a> (“Platform” or “Website”).
+                                This Privacy Policy explains how <strong className="text-white">Dhasha Media</strong> (hereinafter referred to as “Dhasha Media,” “We,” “Us,” or “Our”) collects, uses, processes, stores, shares, and protects information belonging to users (“You,” “Your,” or “Users”) who access or use our services through our website <a href="https://www.dhashamedia.com/" className="text-[#DAC291] hover:underline underline-offset-4 decoration-[#DAC291]/50">https://www.dhashamedia.com/</a> (“Platform” or “Website”).
                             </p>
                             <p>
                                 This Policy should be read together with our Terms of Use available at <a href="/terms" className="text-[#DAC291] hover:underline underline-offset-4 decoration-[#DAC291]/50">/terms</a>. By accessing or using our Website or Services, you acknowledge that you have read, understood, and agreed to the practices described in this Privacy Policy.
                             </p>
                         </section>
 
-                        {/* About DHA Media */}
+                        {/* About Dhasha Media */}
                         <section>
                             <h2 className="text-3xl md:text-4xl font-medium text-white mb-6 flex items-center gap-3">
                                 <span className="w-2 h-8 bg-[#DAC291] rounded-sm inline-block"></span>
-                                About DHA Media
+                                About Dhasha Media
                             </h2>
                             <p>
-                                DHA Media is a 10-in-1 integrated media company, offering services that include but are not limited to digital marketing, branding, web development, app development, content creation, advertising, design, social media management, analytics, and media consulting.
+                                Dhasha Media is a 10-in-1 integrated media company, offering services that include but are not limited to digital marketing, branding, web development, app development, content creation, advertising, design, social media management, analytics, and media consulting.
                             </p>
                         </section>
 
@@ -75,7 +75,7 @@ export default function Privacy() {
                                 Storage and Processing of Information
                             </h2>
                             <p>
-                                The information collected by DHA Media may be stored and processed within India or in other countries, including the United States, where our infrastructure, affiliates, partners, or service providers operate. We ensure appropriate safeguards are in place wherever data is processed.
+                                The information collected by Dhasha Media may be stored and processed within India or in other countries, including the United States, where our infrastructure, affiliates, partners, or service providers operate. We ensure appropriate safeguards are in place wherever data is processed.
                             </p>
                         </section>
 
@@ -107,7 +107,7 @@ export default function Privacy() {
                                 <div className="bg-white/[0.03] p-6 rounded-xl border border-white/5 hover:border-[#DAC291]/20 transition duration-300">
                                     <h3 className="text-xl font-semibold text-[#DAC291] mb-4">2. Transaction and Commercial Data</h3>
                                     <p className="mb-4">
-                                        DHA Media does not store payment card details or bank account information.
+                                        Dhasha Media does not store payment card details or bank account information.
                                     </p>
                                     <p className="text-sm">
                                         However, we may retain non-financial transaction records such as order confirmations, service references, and invoices strictly for operational and compliance purposes.
@@ -220,7 +220,7 @@ export default function Privacy() {
                                 <h2 className="text-2xl font-medium text-white mb-4">Third-Party Information Providers</h2>
                                 <p className="mb-4 text-sm text-gray-400">In limited cases, we may receive information from:</p>
                                 <ul className="list-disc pl-5 space-y-2 marker:text-[#DAC291]">
-                                    <li>DHA Media affiliates and subsidiaries</li>
+                                    <li>Dhasha Media affiliates and subsidiaries</li>
                                     <li>Event collaborators and partners</li>
                                     <li>Social media platforms</li>
                                     <li>Advertising and analytics partners</li>
