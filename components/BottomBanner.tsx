@@ -40,7 +40,7 @@ export default function BottomBanner() {
                         <p className="text-[10px] font-normal text-white tracking-widest uppercase">
                             Designed & Developed by{' '}
                             <a
-                                href="https://redlix.in"
+                                href="https://www.redlix.co.in/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-[#DAC291] hover:text-white transition-all underline underline-offset-8 decoration-[#DAC291]/50"
