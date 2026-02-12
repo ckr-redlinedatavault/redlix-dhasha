@@ -50,7 +50,7 @@ export default function OurStory() {
                         <div className="bg-black text-white p-4 rounded-3xl border border-black group">
                             <div className="aspect-square w-full bg-zinc-900 rounded-2xl mb-8 overflow-hidden">
                                 <img
-                                    src="https://res.cloudinary.com/dsqqrpzfl/image/upload/v1770930795/WhatsApp_Image_2026-02-12_at_23.44.58_hu0tww.jpg"
+                                    src="https://res.cloudinary.com/dsqqrpzfl/image/upload/v1770931011/Screenshot_2026-02-13_at_02.45.59_kw8pih.png"
                                     alt="Founder"
                                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                                 />
