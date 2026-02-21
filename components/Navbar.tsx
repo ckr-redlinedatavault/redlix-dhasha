@@ -54,7 +54,7 @@ export default function Navbar() {
             </div>
 
             <div className="flex items-center space-x-3">
-              <Link href="/contact" className="flex items-center gap-2 bg-transparent border border-gray-900/20 text-gray-900 px-4 py-2 rounded-full font-semibold text-sm hover:bg-black/5 transition-all">
+              <Link href="https://bookings.dhashamedia.com/contact" className="flex items-center gap-2 bg-transparent border border-gray-900/20 text-gray-900 px-4 py-2 rounded-full font-semibold text-sm hover:bg-black/5 transition-all">
                 <Mail size={16} />
                 Contact Us
               </Link>
