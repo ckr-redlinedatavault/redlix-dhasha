@@ -1,7 +1,6 @@
 'use client';
 
-import { useState } from 'react';
-import { Check, Sparkles, Zap } from 'lucide-react';
+import { Check, Zap } from 'lucide-react';
 import { Bricolage_Grotesque } from 'next/font/google';
 import Link from 'next/link';
 
@@ -10,131 +9,140 @@ const bricolage = Bricolage_Grotesque({
     display: 'swap',
 });
 
+const plans = [
+    {
+        name: 'Hourly Plan',
+        subtitle: 'FAST, FLEXIBLE, AND IMPACTFUL',
+        wasPrice: '2,399',
+        price: '1,999',
+        description: 'Perfect for individuals who want a single, high-quality reel delivered fast.',
+        features: [
+            '1 Hour Shoot',
+            '1 Edited Reel Delivered',
+            '1 Reel Maker Onsite',
+            'Shot on Latest iPhones',
+            'Watermark Included'
+        ],
+    },
+    {
+        name: 'Half Day Plan',
+        subtitle: 'Built for Events',
+        wasPrice: '5,999',
+        price: '4,999',
+        description: 'Ideal for events and detailed social media coverage with faster turnaround.',
+        features: [
+            'Upto 3 hours shoot',
+            '2 Edited Reels Delivered',
+            '1 Reel Maker Onsite',
+            'Raw footage access',
+            'Shot on latest iPhones',
+            'Watermark Included'
+        ],
+    },
+    {
+        name: 'Full Day Plan',
+        subtitle: 'The Ultimate Package',
+        wasPrice: '9,999',
+        price: '7,999',
+        description: 'Comprehensive 8-hour production for maximum brand impact and growth.',
+        features: [
+            'Full Day Shoot (8 Hours)',
+            '5 Edited Reels Delivered',
+            'Lead Reel Maker Onsite',
+            'Raw footage access',
+            'Shot on latest iPhones',
+            'DHASHA MEDIA Branding Included'
+        ],
+    }
+];
+
 export default function PricingPlans() {
-    const [isYearly, setIsYearly] = useState(true);
-
-    const plans = [
-        {
-            name: 'One-Off',
-            price: isYearly ? 1499 : 1999,
-            description: 'Perfect for testing our quality with a single reel.',
-            features: ['1 Professional Reel', '10-Minute Handover', 'Basic Sound FX', 'Standard Quality'],
-            popular: false
-        },
-        {
-            name: 'Growth',
-            price: isYearly ? 5999 : 7499,
-            description: 'Strategic content for small business owners.',
-            features: ['4 Reels Per Month', 'Trend Analysis', 'Advanced Editing', 'Priority Support', 'Thumbnail Design'],
-            popular: false
-        },
-        {
-            name: 'Creator',
-            price: isYearly ? 11999 : 14999,
-            description: 'Our most popular plan for rapid social growth.',
-            features: ['10 Reels Per Month', 'Viral Script Writing', 'Professional Colorist', 'Dedicated WhatsApp Manager', '24h Delivery'],
-            popular: true
-        },
-        {
-            name: 'Studio',
-            price: 'Custom',
-            description: 'Full-scale media production for elite brands.',
-            features: ['Unlimited Production', 'On-Site Team', 'Multi-Platform Strategy', 'Raw Footage Access', 'Full Intellectual Property'],
-            popular: false
-        }
-    ];
-
     return (
-        <section id="pricing" className={`${bricolage.className} py-20 bg-black text-white overflow-hidden`}>
-            <div className="max-w-[1400px] mx-auto px-6 lg:px-8 relative">
+        <section id="pricing" className={`${bricolage.className} py-24 bg-black text-white overflow-hidden relative`}>
+            
+            {/* Ambient Gold Glows */}
+            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#DAC291]/5 blur-[120px] rounded-full -z-10" />
+            <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#B89E6C]/5 blur-[120px] rounded-full -z-10" />
 
+            <div className="max-w-7xl mx-auto px-6 relative z-10">
+                
                 {/* Header */}
-                <div className="text-center mb-12">
+                <div className="text-center mb-16">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#DAC291]/20 bg-[#DAC291]/5 mb-6">
                         <Zap size={14} className="text-[#DAC291]" />
-                        <span className="text-[#DAC291] text-[10px] font-bold tracking-[0.4em] uppercase">Invest in Quality</span>
+                        <span className="text-[#DAC291] text-[10px] font-bold tracking-[0.4em] uppercase">Premium Media Services</span>
                     </div>
-                    <h2 className="text-4xl md:text-6xl font-extralight tracking-tight mb-6">
+                    <h2 className="text-4xl md:text-6xl font-extralight tracking-tight mb-4">
                         Transparent <span className="font-bold bg-gradient-to-r from-[#B89E6C] via-[#DAC291] to-[#EAD7B0] bg-clip-text text-transparent">Pricing</span>
                     </h2>
-
-                    {/* Toggle Switch */}
-                    <div className="flex items-center justify-center gap-6 mt-10">
-                        <span className={`text-xs font-bold tracking-widest uppercase transition-colors ${!isYearly ? 'text-[#DAC291]' : 'text-zinc-600'}`}>Monthly</span>
-                        <button
-                            onClick={() => setIsYearly(!isYearly)}
-                            className="relative w-14 h-7 bg-zinc-900 border border-[#DAC291]/20 rounded-full p-1 transition-all"
-                        >
-                            <div className={`w-5 h-5 bg-[#DAC291] rounded-full shadow-lg transform transition-transform duration-300 ${isYearly ? 'translate-x-7' : 'translate-x-0'}`} />
-                        </button>
-                        <span className={`text-xs font-bold tracking-widest uppercase transition-colors ${isYearly ? 'text-[#DAC291]' : 'text-zinc-600'}`}>
-                            Yearly <span className="text-[10px] bg-[#DAC291]/20 px-2 py-0.5 rounded ml-1 text-[#DAC291]">-20%</span>
-                        </span>
-                    </div>
                 </div>
 
-                {/* 4 Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {/* 3 Cards Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {plans.map((plan, index) => (
                         <div
                             key={index}
-                            className={`relative rounded-[2.5rem] p-6 flex flex-col transition-all duration-500 hover:scale-[1.03] ${plan.popular
-                                ? 'bg-gradient-to-br from-[#B89E6C] via-[#DAC291] to-[#EAD7B0] text-black shadow-2xl'
-                                : 'bg-zinc-900/50 border border-white/10 hover:border-[#DAC291]/40'
-                                }`}
+                            className="relative rounded-[2.5rem] p-8 md:p-10 flex flex-col items-center text-center transition-all duration-500 hover:scale-[1.02] bg-zinc-900/40 border border-[#DAC291]/10 hover:border-[#DAC291]/40 group"
                         >
-                            {plan.popular && (
-                                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                                    <span className="bg-black text-[#DAC291] text-[10px] font-bold px-5 py-2 rounded-full uppercase tracking-[0.2em] flex items-center gap-2 whitespace-nowrap">
-                                        <Sparkles size={12} /> Most Popular
-                                    </span>
-                                </div>
-                            )}
-
-                            <div className="mb-10">
-                                <h3 className={`text-xl font-bold tracking-tight mb-2 ${plan.popular ? 'text-black' : 'text-[#DAC291]'}`}>
+                            {/* Card Header */}
+                            <div className="mb-6">
+                                <h3 className="text-3xl font-bold tracking-tight mb-1 text-white">
                                     {plan.name}
                                 </h3>
-                                <p className={`text-xs leading-relaxed ${plan.popular ? 'text-black/60' : 'text-zinc-400'}`}>
+                                <p className="text-[10px] font-bold tracking-[0.15em] uppercase text-[#DAC291] mb-4">
+                                    {plan.subtitle}
+                                </p>
+                                <p className="text-sm leading-relaxed text-zinc-400 max-w-[250px] min-h-[40px]">
                                     {plan.description}
                                 </p>
                             </div>
 
-                            <div className="mb-10 flex items-baseline gap-1">
-                                <span className="text-4xl md:text-5xl font-black tracking-tighter">
-                                    {typeof plan.price === 'number' ? `₹${plan.price.toLocaleString()}` : plan.price}
-                                </span>
-                                {typeof plan.price === 'number' && (
-                                    <span className={`text-sm ${plan.popular ? 'text-black/40' : 'text-zinc-600'}`}>/pack</span>
-                                )}
+                            {/* Pricing Section */}
+                            <div className="mb-8 flex flex-col items-center">
+                                <div className="flex items-center gap-2 mb-2">
+                                    <span className="text-[10px] font-bold uppercase text-[#B89E6C]/60 tracking-widest">Was</span>
+                                    <span className="text-zinc-600 line-through text-lg decoration-[#DAC291]/40">₹{plan.wasPrice}</span>
+                                </div>
+                                <div className="flex flex-col items-center">
+                                    <span className="text-6xl font-black tracking-tighter bg-gradient-to-b from-[#EAD7B0] via-[#DAC291] to-[#B89E6C] bg-clip-text text-transparent">
+                                        ₹{plan.price}
+                                    </span>
+                                </div>
                             </div>
 
-                            <ul className="space-y-4 mb-12 flex-grow">
-                                {plan.features.map((feature, i) => (
-                                    <li key={i} className="flex items-start gap-3 text-sm">
-                                        <Check className={`w-5 h-5 shrink-0 ${plan.popular ? 'text-black' : 'text-[#DAC291]'}`} />
-                                        <span className={plan.popular ? 'font-medium' : 'font-light text-zinc-300'}>{feature}</span>
-                                    </li>
-                                ))}
-                            </ul>
+                            {/* Features Section */}
+                            <div className="w-full text-center mb-10">
+                                <div className="h-px w-full bg-gradient-to-r from-transparent via-[#DAC291]/20 to-transparent mb-6" />
+                                <p className="text-[9px] font-bold tracking-[0.3em] uppercase text-[#DAC291]/40 mb-6">
+                                    What&apos;s Included
+                                </p>
+                                <ul className="space-y-4 inline-block text-left">
+                                    {plan.features.map((feature, i) => (
+                                        <li key={i} className="flex items-center gap-3 text-sm">
+                                            <Check className="w-4 h-4 shrink-0 text-[#DAC291]" />
+                                            <span className={`font-light ${feature.includes('DHASHA') ? 'text-[#DAC291] font-bold' : 'text-zinc-300'}`}>
+                                                {feature}
+                                            </span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
 
+                            {/* CTA Button - Solid Gold Gradient */}
                             <Link
                                 href="https://bookings.dhashamedia.com/contact"
-                                className={`block w-full text-center py-4 rounded-full font-bold text-[11px] uppercase tracking-[0.2em] transition-all ${plan.popular
-                                    ? 'bg-black text-[#DAC291] hover:bg-zinc-800 shadow-xl'
-                                    : 'bg-white/5 border border-[#DAC291]/20 text-[#DAC291] hover:bg-[#DAC291]/5'
-                                    }`}
+                                className="mt-auto block w-full text-center py-4 rounded-2xl font-bold text-[13px] text-black transition-all bg-gradient-to-r from-[#B89E6C] via-[#DAC291] to-[#EAD7B0] hover:brightness-110 shadow-lg shadow-[#DAC291]/5 uppercase tracking-widest"
                             >
-                                Get Started
+                                Book Your Session &rarr;
                             </Link>
                         </div>
                     ))}
                 </div>
 
                 {/* Footer Disclaimer */}
-                <div className="mt-16 text-center opacity-20">
+                <div className="mt-20 text-center opacity-20">
                     <p className="text-[9px] tracking-[0.5em] uppercase font-light">
-                        Prices are subject to project complexity • DHASHA MEDIA 2024
+                        Premium Content Creation • DHASHA MEDIA 2025
                     </p>
                 </div>
             </div>
