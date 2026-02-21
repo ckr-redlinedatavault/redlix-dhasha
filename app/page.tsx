@@ -171,6 +171,7 @@ export default function ComponentsDemo() {
       <WhyChooseUs />
       <DhashaStudio />
       <WhyWeStandOut />
+      <PricingPlans />
 
       <Testimonial />
       <FAQ />
