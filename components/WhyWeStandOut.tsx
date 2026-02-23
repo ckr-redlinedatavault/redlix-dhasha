@@ -90,8 +90,6 @@ export default function PowerhouseSlider() {
     return (
         <section className={`${bricolage.className} py-16 bg-black text-white`}>
             <div className="max-w-6xl mx-auto px-6">
-
-                {/* Compact Header Area */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6">
                     <div>
                         <p className="text-[#DAC291] text-[10px] font-bold tracking-[0.4em] uppercase mb-2">Our Expertise</p>
@@ -99,8 +97,6 @@ export default function PowerhouseSlider() {
                             Media <span className="text-gray-500 font-light">Powerhouse</span>
                         </h2>
                     </div>
-
-                    {/* Navigation */}
                     <div className="flex items-center gap-4">
                         <div className="text-xs font-bold tabular-nums">
                             <span className="text-[#DAC291]">{services[index].tag}</span>
@@ -117,8 +113,6 @@ export default function PowerhouseSlider() {
                         </div>
                     </div>
                 </div>
-
-                {/* Main Card - Reduced Height */}
                 <div className="relative">
                     <AnimatePresence mode="wait">
                         <motion.div
@@ -131,7 +125,6 @@ export default function PowerhouseSlider() {
                         >
                             <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[360px] md:min-h-[400px]">
 
-                                {/* Left Side: Image Section */}
                                 <div className={`lg:col-span-5 flex flex-col items-center justify-center relative overflow-hidden ${index === 1 || index === 2 ? 'p-0' : 'p-8 md:p-12'}`}>
                                     <div className={`relative z-10 w-full h-full flex items-center justify-center ${index === 1 || index === 2 ? 'absolute inset-0' : ''}`}>
                                         <img
@@ -148,7 +141,6 @@ export default function PowerhouseSlider() {
                                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(218,194,145,0.08)_0%,transparent_70%)]" />
                                 </div>
 
-                                {/* Right Side: Full Gold Content Section */}
                                 <div className="lg:col-span-7 bg-[#DAC291] p-8 md:p-12 flex flex-col justify-center text-black">
                                     <div className="mb-3 flex items-center gap-2">
                                         <div className="h-[2px] w-6 bg-black/20" />
@@ -168,8 +160,6 @@ export default function PowerhouseSlider() {
                                             Get Started
                                             <MoveRight size={16} className="group-hover:translate-x-1 transition-transform" />
                                         </Link>
-
-                                        {/* Minimal Progress */}
                                         <div className="flex items-center gap-3 opacity-40">
                                             <div className="w-12 h-[2px] bg-black/10 rounded-full overflow-hidden">
                                                 <motion.div
@@ -188,7 +178,6 @@ export default function PowerhouseSlider() {
                     </AnimatePresence>
                 </div>
 
-                {/* Clean Indicator Dots */}
                 <div className="flex justify-center gap-2 mt-8">
                     {services.map((_, i) => (
                         <button
