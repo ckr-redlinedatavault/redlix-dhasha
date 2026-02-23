@@ -33,7 +33,7 @@ export default function ChatWidget() {
         { id: 1, text: "Hello! How can we help you today?", sender: 'bot' }
     ]);
     const messagesEndRef = useRef<HTMLDivElement>(null);
-    const idCounter = useRef(2); // Start from 2 since 1 is initial message
+    const idCounter = useRef(2); 
 
     const toggleChat = () => setIsOpen(!isOpen);
 
@@ -72,7 +72,6 @@ export default function ChatWidget() {
         setMessages(prev => [...prev, newUserMessage]);
         setInputValue("");
 
-        // Simulate network delay
         setTimeout(() => {
             const botResponseText = getBotResponse(text);
             const botId = idCounter.current++;
@@ -93,7 +92,7 @@ export default function ChatWidget() {
 
     return (
         <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end">
-            {/* Chat Window */}
+   
             {isOpen && (
                 <div className="mb-4 w-[90vw] sm:w-[420px] h-[600px] max-h-[80vh] bg-black border border-[#DAC291]/20 rounded-2xl shadow-2xl overflow-hidden flex flex-col animate-in slide-in-from-bottom-5 fade-in duration-300">
                     {/* Header */}
@@ -115,7 +114,6 @@ export default function ChatWidget() {
                         </button>
                     </div>
 
-                    {/* Chat Area */}
                     <div className="flex-1 bg-black p-5 overflow-y-auto space-y-4 scrollbar-thin scrollbar-thumb-[#DAC291]/20 scrollbar-track-transparent">
 
                         {messages.map((msg) => (
@@ -134,7 +132,6 @@ export default function ChatWidget() {
                         <div ref={messagesEndRef} />
                     </div>
 
-                    {/* Predefined Questions (Horizontal Scroll) */}
                     <div className="px-4 py-2 bg-black border-t border-[#DAC291]/5 overflow-x-auto whitespace-nowrap scrollbar-hide">
                         <div className="flex gap-2">
                             {PREDEFINED_QUESTIONS.map((q, i) => (
@@ -149,7 +146,6 @@ export default function ChatWidget() {
                         </div>
                     </div>
 
-                    {/* Input Area */}
                     <div className="p-4 bg-black border-t border-[#DAC291]/10 shrink-0">
                         <div className="flex gap-2">
                             <input
@@ -172,7 +168,6 @@ export default function ChatWidget() {
                 </div>
             )}
 
-            {/* Toggle Button */}
             <button
                 onClick={toggleChat}
                 className={`flex items-center justify-center w-14 h-14 rounded-full shadow-2xl transition-all duration-300 border border-[#DAC291]/20 ${isOpen
