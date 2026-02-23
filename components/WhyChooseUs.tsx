@@ -52,19 +52,17 @@ export default function WhyChooseUs() {
 
     return (
         <section className={`${bricolage.className} py-12 md:py-20 bg-[#050505] overflow-hidden relative`}>
-            {/* Background Accent Line */}
+
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-[#DAC291]/10 to-transparent" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-                {/* Header Section */}
                 <div className="text-center mb-10 md:mb-16">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#DAC291]/20 bg-[#DAC291]/5 mb-4 md:mb-6">
                         <Sparkles size={12} className="text-[#DAC291]" />
                         <span className="text-[#DAC291] text-[9px] md:text-[10px] font-bold tracking-[0.3em] uppercase">Why Choose Us</span>
                     </div>
 
-                    {/* Fluid Typography for single line header */}
                     <h2 className="text-[1.4rem] xs:text-[1.7rem] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tighter mb-4 whitespace-nowrap overflow-hidden text-ellipsis">
                         Not just instant <span className="bg-gradient-to-r from-[#B89E6C] via-[#DAC291] to-[#EAD7B0] bg-clip-text text-transparent">delivery.</span>
                     </h2>
@@ -73,8 +71,6 @@ export default function WhyChooseUs() {
                         We have re-engineered content creation to focus on safety, quality, and professional speed.
                     </p>
                 </div>
-
-                {/* Features Bento Grid: 1 col mobile, 2 col tablet, 3 col desktop */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                     {features.map((feature, index) => (
                         <motion.div
@@ -86,9 +82,9 @@ export default function WhyChooseUs() {
                             whileHover={{ y: -5 }}
                             className="group flex flex-col bg-[#0A0A0A] border border-white/5 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden transition-all duration-500 hover:border-[#DAC291]/30"
                         >
-                            {/* Image Stage: Reduced height for mobile */}
+
                             <div className="h-40 md:h-44 relative bg-[#DAC291] flex items-end justify-center pt-6">
-                                {/* Watermark Number: Italic Version */}
+
                                 <div className="absolute top-3 left-5 md:top-4 md:left-6 text-black/10 text-3xl md:text-4xl font-black italic tracking-tighter select-none">
                                     0{index + 1}
                                 </div>
@@ -100,7 +96,7 @@ export default function WhyChooseUs() {
                                 />
                             </div>
 
-                            {/* Content Area */}
+
                             <div className="p-6 md:p-8 flex flex-col flex-grow">
                                 <div className="flex items-center gap-3 mb-2 md:mb-3">
                                     <div className="w-7 h-7 md:w-8 md:h-8 rounded-lg bg-white/5 flex items-center justify-center text-[#DAC291] border border-white/10 group-hover:bg-[#DAC291] group-hover:text-black transition-colors">
@@ -118,7 +114,6 @@ export default function WhyChooseUs() {
                     ))}
                 </div>
 
-                {/* Responsive Footer CTA */}
                 <div className="mt-10 md:mt-14 text-center">
                     <Link
                         href="https://bookings.dhashamedia.com/booking/7bee9ed4-6530-4e3d-b89e-98356b0bf47e"
