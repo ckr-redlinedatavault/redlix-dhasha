@@ -59,14 +59,12 @@ const plans = [
 export default function PricingPlans() {
     return (
         <section id="pricing" className={`${bricolage.className} py-12 bg-black text-white overflow-hidden relative`}>
-            
-            {/* Ambient Gold Glows */}
+
             <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#DAC291]/5 blur-[120px] rounded-full -z-10" />
             <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#B89E6C]/5 blur-[120px] rounded-full -z-10" />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
-                
-                {/* Header - Tightened spacing */}
+
                 <div className="text-center mb-10">
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#DAC291]/20 bg-[#DAC291]/5 mb-4">
                         <Zap size={12} className="text-[#DAC291]" />
@@ -77,14 +75,13 @@ export default function PricingPlans() {
                     </h2>
                 </div>
 
-                {/* 3 Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {plans.map((plan, index) => (
                         <div
                             key={index}
                             className="relative rounded-[2rem] p-8 flex flex-col items-center text-center transition-all duration-500 hover:scale-[1.01] bg-zinc-900/40 border border-[#DAC291]/10 hover:border-[#DAC291]/40"
                         >
-                            {/* Card Header */}
+                     
                             <div className="mb-4">
                                 <h3 className="text-2xl font-bold tracking-tight mb-1 text-white">
                                     {plan.name}
@@ -97,7 +94,6 @@ export default function PricingPlans() {
                                 </p>
                             </div>
 
-                            {/* Pricing Section */}
                             <div className="mb-6 flex flex-col items-center">
                                 <div className="flex items-center gap-2 mb-1">
                                     <span className="text-[9px] font-bold uppercase text-[#B89E6C]/60 tracking-widest">Was</span>
@@ -108,7 +104,6 @@ export default function PricingPlans() {
                                 </span>
                             </div>
 
-                            {/* Features Section */}
                             <div className="w-full text-center mb-8">
                                 <div className="h-px w-full bg-gradient-to-r from-transparent via-[#DAC291]/10 to-transparent mb-5" />
                                 <ul className="space-y-3 inline-block text-left">
@@ -123,7 +118,7 @@ export default function PricingPlans() {
                                 </ul>
                             </div>
 
-                            {/* CTA Button */}
+  
                             <Link
                                 href="https://bookings.dhashamedia.com/contact"
                                 className="mt-auto block w-full text-center py-3.5 rounded-xl font-bold text-[12px] text-black transition-all bg-gradient-to-r from-[#B89E6C] via-[#DAC291] to-[#EAD7B0] hover:brightness-110 shadow-lg shadow-[#DAC291]/5 uppercase tracking-widest"
