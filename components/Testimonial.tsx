@@ -22,11 +22,10 @@ const partners = [
     { name: 'NeoStretch', role: 'Partner', content: 'Capturing the energy of our apparel with dynamic editing that captures the modern athlete.', logoUrl: 'https://res.cloudinary.com/dsqqrpzfl/image/upload/v1769862961/WhatsApp-Image-2024-02-28-at-18.36.40_e65fd31f-removebg-preview_fwjmlk.png' },
 ];
 
-// Reusable clean card component
+
 const Card = ({ title, subtitle, content, image, isLogo = false }: { title: string, subtitle: string, content: string, image: string, isLogo?: boolean }) => (
     <div className="flex-shrink-0 w-[450px] md:w-[500px] mx-4 p-8 rounded-2xl bg-[#0A0A0A] border border-white/5 flex items-center gap-6 group hover:border-[#DAC291]/30 transition-colors duration-300">
 
-        {/* Left Side: Content */}
         <div className="flex-1 flex flex-col justify-between h-full">
             <div>
                 {!isLogo && (
@@ -45,7 +44,6 @@ const Card = ({ title, subtitle, content, image, isLogo = false }: { title: stri
             </div>
         </div>
 
-        {/* Right Side: Square Image */}
         <div className="w-24 h-24 md:w-32 md:h-32 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-zinc-900">
             <img
                 src={image}
@@ -88,7 +86,6 @@ export default function Testimonials() {
                 </h2>
             </div>
 
-            {/* Testimonials Row (Right to Left / Normal) - Hovering row pauses it */}
             <div className="flex mb-8 overflow-hidden group">
                 <div className="flex flex-nowrap animate-marquee">
                     {[...testimonials, ...testimonials, ...testimonials, ...testimonials].map((t, i) => (
@@ -103,7 +100,7 @@ export default function Testimonials() {
                 </div>
             </div>
 
-            {/* Partners Row (Left to Right / Reverse) - Hovering row pauses it */}
+
             <div className="flex overflow-hidden group">
                 <div className="flex flex-nowrap animate-marquee-reverse">
                     {[...partners, ...partners, ...partners, ...partners].map((p, i) => (
@@ -119,7 +116,6 @@ export default function Testimonials() {
                 </div>
             </div>
 
-            {/* Edge Fades */}
             <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
             <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
         </section>
