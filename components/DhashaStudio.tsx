@@ -11,14 +11,9 @@ const bricolage = Bricolage_Grotesque({
 export default function DhashaStudioTeaser() {
     return (
         <section className={`${bricolage.className} bg-[#DAC291] text-black py-12 md:py-16 relative overflow-hidden flex items-center`}>
-
-            {/* Background Texture & Depth */}
             <div className="absolute inset-0 opacity-[0.12] bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] pointer-events-none" />
-
-            {/* Radial Spotlight Effect */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(255,255,255,0.35),transparent)]" />
 
-            {/* Giant Background Watermark */}
             <div className="absolute -bottom-10 -left-10 text-[12rem] md:text-[16rem] font-black opacity-[0.04] select-none pointer-events-none tracking-tighter leading-none">
                 STUDIO
             </div>
@@ -26,7 +21,6 @@ export default function DhashaStudioTeaser() {
             <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-10">
 
-                    {/* Left: Heading Content */}
                     <div className="relative">
                         <div className="flex items-center gap-3 mb-4">
                             <span className="h-[2px] w-6 bg-black/80"></span>
@@ -45,7 +39,6 @@ export default function DhashaStudioTeaser() {
                         </div>
                     </div>
 
-                    {/* Right: CTA Section */}
                     <div className="flex flex-col items-center md:items-end gap-5">
                         <button className="group relative flex items-center gap-6 bg-black text-white px-10 py-5 rounded-xl font-bold text-[11px] uppercase tracking-[0.2em] transition-all duration-500 hover:rounded-3xl hover:scale-[1.03] shadow-2xl shadow-black/20">
                             <span className="relative z-10">Get Early Access</span>
@@ -53,7 +46,6 @@ export default function DhashaStudioTeaser() {
                                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                             </div>
 
-                            {/* Reflection Shine Effect */}
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                         </button>
 
@@ -70,7 +62,6 @@ export default function DhashaStudioTeaser() {
                 </div>
             </div>
 
-            {/* Subtle Border Accents */}
             <div className="absolute top-0 left-0 w-full h-[1px] bg-white/10" />
             <div className="absolute bottom-0 left-0 w-full h-[1px] bg-black/5" />
         </section>
