@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { Menu, X, ChevronRight, Smartphone, Mail } from 'lucide-react';
 import Link from 'next/link';
-// Import Bricolage Grotesque font
 import { Bricolage_Grotesque } from 'next/font/google';
 
 const bricolage = Bricolage_Grotesque({
@@ -39,7 +38,6 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
             <div className="flex items-center space-x-6 mr-4 border-r border-black/10 pr-6">
               {navLinks.map((link) => (
@@ -66,8 +64,6 @@ export default function Navbar() {
               </button>
             </div>
           </div>
-
-          {/* Mobile Menu Button & Studio Link */}
           <div className="lg:hidden flex items-center gap-4">
             <Link
               href="/studio"
@@ -85,7 +81,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+
       {
         isOpen && (
           <div className="lg:hidden bg-[#DAC291] border-t border-black/10 absolute w-full shadow-2xl">
@@ -116,8 +112,6 @@ export default function Navbar() {
         )
       }
 
-
-      {/* App Coming Soon Modal */}
       {showAppModal && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center px-4 bg-black/60 backdrop-blur-sm" onClick={() => setShowAppModal(false)}>
           <div className="bg-[#DAC291] w-full max-w-md rounded-[2rem] p-8 text-center relative border border-white/20 shadow-2xl overflow-hidden" onClick={e => e.stopPropagation()}>
@@ -136,7 +130,7 @@ export default function Navbar() {
             </p>
 
             <div className="flex flex-col gap-3">
-              {/* App Store Badge - Official Style */}
+            
               <button className="bg-black text-white w-full py-3 rounded-xl flex items-center justify-center gap-3 transition-transform active:scale-95 group">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" alt="Apple" className="h-6 w-auto" />
                 <div className="text-left leading-none">
@@ -145,10 +139,9 @@ export default function Navbar() {
                 </div>
               </button>
 
-              {/* Play Store Badge - Official Style */}
               <button className="bg-black text-white w-full py-3 rounded-xl flex items-center justify-center gap-3 transition-transform active:scale-95 group">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" className="h-8 w-auto scale-110" />
-                {/* Note: The Google Play Badge SVG usually contains text, so we adjust sizing */}
+               
               </button>
             </div>
 
