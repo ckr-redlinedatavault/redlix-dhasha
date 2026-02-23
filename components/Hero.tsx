@@ -97,7 +97,6 @@ export default function HeroWithCards() {
         if (index === middleIndex) rotateNext();
     };
 
-    // --- DRAG / SWIPE HANDLERS ---
     
     const onStart = (clientX: number) => {
         setIsDragging(true);
@@ -151,13 +150,12 @@ export default function HeroWithCards() {
                     </div>
                 </div>
 
-                {/* CARDS SECTION with Desktop Dragging */}
                 <div
-                    // Touch Events
+                    
                     onTouchStart={(e) => onStart(e.touches[0].clientX)}
                     onTouchMove={(e) => onMove(e.touches[0].clientX)}
                     onTouchEnd={onEnd}
-                    // Mouse Events
+                  
                     onMouseDown={(e) => onStart(e.clientX)}
                     onMouseMove={(e) => onMove(e.clientX)}
                     onMouseUp={onEnd}
