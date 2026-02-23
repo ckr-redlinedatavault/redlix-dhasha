@@ -12,13 +12,11 @@ const bricolage = Bricolage_Grotesque({
 export default function AppSection() {
     return (
         <section className={`${bricolage.className} py-12 bg-[#050505] overflow-hidden relative`}>
-            {/* Ambient Background Lighting */}
+        
             <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[400px] h-[400px] bg-[#DAC291]/5 blur-[100px] rounded-full pointer-events-none" />
 
             <div className="max-w-6xl mx-auto px-6 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
-
-                    {/* Left Side: Content Area */}
                     <div className="flex flex-col">
                         <div className="flex items-center gap-2 px-3 py-1 rounded-full border border-[#DAC291]/20 bg-[#DAC291]/5 w-fit mb-4">
                             <span className="w-1.5 h-1.5 rounded-full bg-[#DAC291] animate-pulse" />
@@ -36,10 +34,8 @@ export default function AppSection() {
                             The professional ecosystem for creators and brands, optimized for high-speed mobile workflows.
                         </p>
 
-                        {/* Tightened Bento Grid */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-w-lg">
 
-                            {/* Offer Card */}
                             <div className="bg-[#DAC291] p-5 rounded-2xl flex flex-col justify-between min-h-[125px] shadow-xl transition-transform hover:scale-[1.01]">
                                 <div className="w-9 h-9 bg-black rounded-lg flex items-center justify-center text-[#DAC291]">
                                     <Percent size={18} strokeWidth={2.5} />
@@ -49,8 +45,6 @@ export default function AppSection() {
                                     <p className="text-black/60 text-[9px] font-bold uppercase tracking-widest">Early Adopter Reward</p>
                                 </div>
                             </div>
-
-                            {/* Tech Card - Official Colored Logos */}
                             <div className="bg-[#0A0A0A] border border-white/5 p-5 rounded-2xl flex flex-col justify-between min-h-[125px] hover:border-[#DAC291]/30 transition-all">
                                 <div className="flex items-center justify-between">
                                     <div className="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center text-[#DAC291]">
@@ -61,13 +55,13 @@ export default function AppSection() {
 
                                 <div className="space-y-2">
                                     <div className="flex gap-3 items-center">
-                                        {/* Official Colored Apple Logo */}
+                                        
                                         <img
                                             src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
                                             alt="Apple"
-                                            className="h-4 w-auto invert" // Inverted to white for dark mode
+                                            className="h-4 w-auto invert" 
                                         />
-                                        {/* Official Colored Google Play Logo */}
+                                       
                                         <img
                                             src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg"
                                             alt="Google Play"
@@ -79,7 +73,7 @@ export default function AppSection() {
                             </div>
                         </div>
 
-                        {/* Official Store Badges */}
+                      
                         <div className="mt-8 flex items-center gap-4">
                             <img
                                 src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
@@ -94,12 +88,12 @@ export default function AppSection() {
                         </div>
                     </div>
 
-                    {/* Right Side: Mockup Stage (Slightly reduced size for clean fit) */}
+                 
                     <div className="relative flex justify-center items-center mt-8 lg:mt-0">
                         <div className="absolute w-[70%] aspect-square bg-[#DAC291]/5 blur-[80px] rounded-full pointer-events-none" />
 
                         <div className="relative flex items-center justify-center w-full">
-                            {/* Secondary Mockup */}
+                
                             <motion.div
                                 initial={{ x: -10, opacity: 0, rotate: -4 }}
                                 whileInView={{ x: -30, opacity: 0.15, rotate: -8 }}
@@ -113,7 +107,7 @@ export default function AppSection() {
                                 />
                             </motion.div>
 
-                            {/* Primary Mockup */}
+                
                             <motion.div
                                 initial={{ y: 20, opacity: 0, rotate: 2 }}
                                 whileInView={{ y: 0, opacity: 1, rotate: 4 }}
