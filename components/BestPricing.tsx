@@ -40,8 +40,6 @@ export default function Pricing() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[#DAC291]/5 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-
-                {/* Header */}
                 <div className="text-center mb-12">
                     <p className="text-[#DAC291] text-[10px] md:text-xs font-light tracking-[0.4em] uppercase mb-4">
                         Transparent Pricing
@@ -53,8 +51,6 @@ export default function Pricing() {
                         </span>
                     </h2>
                 </div>
-
-                {/* Pricing Grid */}
                 <div className="grid md:grid-cols-3 gap-6">
                     {plans.map((plan, index) => (
                         <div
@@ -99,7 +95,6 @@ export default function Pricing() {
                     ))}
                 </div>
 
-                {/* Brand Footer */}
                 <div className="mt-20 text-center opacity-30">
                     <p className="text-[10px] tracking-[0.5em] uppercase font-light">
                         Dhasha Media • Precision Pricing
