@@ -39,7 +39,6 @@ export default function FAQ() {
         <section id="faq" className={`${bricolage.className} py-16 bg-gradient-to-r from-[#B89E6C] via-[#DAC291] to-[#EAD7B0] text-black`}>
             <div className="max-w-4xl mx-auto px-6 lg:px-8">
 
-                {/* Header */}
                 <div className="text-center mb-12">
                     <div className="inline-flex items-center gap-2 mb-4 opacity-60">
                         <HelpCircle size={16} />
@@ -53,7 +52,6 @@ export default function FAQ() {
                     </p>
                 </div>
 
-                {/* FAQ Accordion */}
                 <div className="space-y-0 border-t border-black/10">
                     {faqs.map((faq, index) => (
                         <div
@@ -87,7 +85,6 @@ export default function FAQ() {
                     ))}
                 </div>
 
-                {/* Bottom CTA */}
                 <div className="mt-16 text-center">
                     <p className="text-[10px] tracking-[0.2em] font-bold uppercase opacity-40">
                         Still have questions? Reach out to our team 24/7.
