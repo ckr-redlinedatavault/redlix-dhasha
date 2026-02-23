@@ -35,15 +35,12 @@ export default function SocialProof() {
         <section className={`${bricolage.className} py-8 md:py-12 bg-gradient-to-r from-[#B89E6C] via-[#DAC291] to-[#EAD7B0] overflow-hidden`}>
             <div className="max-w-7xl mx-auto px-4">
 
-                {/* Subtle Heading */}
                 <div className="flex flex-col items-center mb-6 md:mb-10">
                     <p className="text-black/60 text-[9px] md:text-xs font-light tracking-[0.4em] uppercase">
                         Trusted by Industry Leaders
                     </p>
                     <div className="h-[1px] w-10 bg-black/20 mt-3"></div>
                 </div>
-
-                {/* One Single Line Logo Container */}
                 <div className="flex flex-row items-center justify-between gap-2 md:gap-12 lg:gap-20">
                     {partners.map((brand) => (
                         <div
@@ -62,7 +59,6 @@ export default function SocialProof() {
                     ))}
                 </div>
 
-                {/* Optional Branding Text */}
                 <div className="mt-8 md:mt-12 text-center">
                     <p className="text-black/30 text-[8px] md:text-[9px] tracking-[0.3em] font-light uppercase italic">
                         Dhasha Media • The Gold Standard 2024
