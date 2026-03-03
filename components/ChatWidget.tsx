@@ -1,6 +1,5 @@
 "use client";
 
-import { MessageCircle, X, Send, Sparkles, Cpu } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -99,77 +98,61 @@ export default function ChatWidget() {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, y: 20, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 20, scale: 0.95 }}
-                        transition={{ duration: 0.3, ease: "easeOut" }}
-                        className="mb-4 w-[90vw] sm:w-[420px] h-[600px] max-h-[80vh] bg-black/90 border border-[#DAC291]/30 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-xl overflow-hidden flex flex-col"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        transition={{ duration: 0.2 }}
+                        className="mb-4 w-[90vw] sm:w-[400px] h-[550px] max-h-[80vh] bg-black border border-white/20 shadow-2xl flex flex-col"
                     >
-                        <div className="relative p-6 flex items-center justify-between shrink-0 overflow-hidden">
-                            <div className="absolute inset-0 bg-gradient-to-r from-[#DAC291]/10 to-transparent pointer-events-none" />
-                            <div className="flex items-center gap-4 relative z-10">
-                                <div className="relative">
-                                    <div className="w-12 h-12 bg-gradient-to-tr from-[#B89E6C] to-[#EAD7B0] rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(218,194,145,0.3)]">
-                                        <Cpu size={24} className="text-black" />
-                                    </div>
-                                    <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-[#DAC291] rounded-full border-4 border-black animate-pulse" />
-                                </div>
+                        <div className="p-6 border-b border-white/10 flex items-center justify-between shrink-0 bg-black">
+                            <div className="flex items-center gap-4">
+                                <div className="w-2 h-2 bg-[#DAC291]" />
                                 <div>
-                                    <h3 className="text-white font-bold text-lg tracking-tight flex items-center gap-2">
-                                        Dhasha AI <Sparkles size={14} className="text-[#DAC291]" />
-                                    </h3>
-                                    <p className="text-[#DAC291]/60 text-xs font-medium uppercase tracking-widest">Neural assistant active</p>
+                                    <h3 className="text-white font-bold text-sm uppercase tracking-[0.2em]">Dhasha AI</h3>
+                                    <p className="text-[#DAC291]/40 text-[9px] uppercase tracking-[0.2em] font-medium">Neural System Active</p>
                                 </div>
                             </div>
                             <button
                                 onClick={toggleChat}
-                                className="text-white/40 hover:text-white bg-white/5 hover:bg-white/10 rounded-full p-2 transition-all relative z-10"
+                                className="text-white/40 hover:text-white text-[10px] font-bold uppercase tracking-widest px-2"
                             >
-                                <X size={20} />
+                                Close
                             </button>
                         </div>
 
-                        <div className="flex-1 px-6 py-4 overflow-y-auto space-y-6 scrollbar-thin scrollbar-thumb-[#DAC291]/10 scrollbar-track-transparent">
+                        <div className="flex-1 px-6 py-6 overflow-y-auto space-y-6 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
                             {messages.map((msg) => (
-                                <motion.div
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
+                                <div
                                     key={msg.id}
                                     className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                                 >
                                     <div className={`
-                                        max-w-[85%] px-5 py-3.5 text-sm leading-relaxed rounded-3xl
+                                        max-w-[85%] px-5 py-4 text-xs leading-relaxed border
                                         ${msg.sender === 'user'
-                                            ? 'bg-gradient-to-tr from-[#B89E6C] to-[#DAC291] text-black rounded-tr-none font-semibold shadow-lg shadow-[#DAC291]/5'
-                                            : 'bg-zinc-900/50 border border-white/5 text-white/90 rounded-tl-none backdrop-blur-sm'}
+                                            ? 'bg-white text-black border-white font-bold'
+                                            : 'bg-black border-white/10 text-white/80'}
                                     `}>
                                         {msg.text}
                                     </div>
-                                </motion.div>
+                                </div>
                             ))}
                             {isTyping && (
-                                <motion.div
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    className="flex justify-start"
-                                >
-                                    <div className="bg-zinc-900/50 border border-white/5 p-4 rounded-3xl rounded-tl-none backdrop-blur-sm flex gap-1.5">
-                                        <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity, duration: 1 }} className="w-1.5 h-1.5 bg-[#DAC291] rounded-full" />
-                                        <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity, duration: 1, delay: 0.2 }} className="w-1.5 h-1.5 bg-[#DAC291] rounded-full" />
-                                        <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity, duration: 1, delay: 0.4 }} className="w-1.5 h-1.5 bg-[#DAC291] rounded-full" />
+                                <div className="flex justify-start">
+                                    <div className="bg-black border border-white/10 px-4 py-3 text-[9px] text-[#DAC291] font-bold uppercase tracking-[0.3em]">
+                                        Processing...
                                     </div>
-                                </motion.div>
+                                </div>
                             )}
                             <div ref={messagesEndRef} />
                         </div>
 
-                        <div className="px-6 py-3 border-t border-white/5 overflow-x-auto whitespace-nowrap scrollbar-hide shrink-0">
+                        <div className="px-6 py-3 border-t border-white/5 overflow-x-auto whitespace-nowrap scrollbar-hide shrink-0 bg-black">
                             <div className="flex gap-2">
                                 {PREDEFINED_QUESTIONS.map((q, i) => (
                                     <button
                                         key={i}
                                         onClick={() => handleSendMessage(q)}
-                                        className="inline-block px-4 py-2 rounded-xl border border-[#DAC291]/20 bg-[#DAC291]/5 text-[#DAC291] text-[10px] font-bold uppercase tracking-wider hover:bg-[#DAC291] hover:text-black transition-all"
+                                        className="inline-block px-4 py-2 border border-white/10 text-white/40 text-[9px] font-bold uppercase tracking-wider hover:border-white/40 hover:text-white transition-all"
                                     >
                                         {q}
                                     </button>
@@ -177,43 +160,40 @@ export default function ChatWidget() {
                             </div>
                         </div>
 
-                        <div className="p-6 shrink-0">
-                            <div className="relative flex items-center">
+                        <div className="p-6 shrink-0 bg-black">
+                            <div className="relative flex items-center gap-2">
                                 <input
                                     type="text"
                                     value={inputValue}
                                     onChange={(e) => setInputValue(e.target.value)}
                                     onKeyDown={handleKeyDown}
-                                    placeholder="Type a message..."
-                                    className="w-full bg-zinc-900/50 border border-white/10 rounded-2xl px-6 py-4 text-white text-sm focus:outline-none focus:border-[#DAC291]/50 transition-all backdrop-blur-md placeholder:text-white/20"
+                                    placeholder="TYPE MESSAGE"
+                                    className="flex-1 bg-black border border-white/20 px-5 py-4 text-white text-[10px] uppercase font-bold tracking-widest focus:outline-none focus:border-white transition-all placeholder:text-white/10"
                                 />
                                 <button
                                     onClick={() => handleSendMessage(inputValue)}
                                     disabled={!inputValue.trim() || isTyping}
-                                    className="absolute right-2 bg-[#DAC291] text-black w-10 h-10 flex items-center justify-center rounded-xl hover:bg-[#EAD7B0] transition-all disabled:opacity-20 disabled:scale-95 shadow-lg shadow-[#DAC291]/10"
+                                    className="bg-white text-black px-6 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-white/90 transition-all disabled:opacity-10"
                                 >
-                                    <Send size={18} />
+                                    Send
                                 </button>
                             </div>
-                            <p className="mt-3 text-center text-[9px] text-white/20 uppercase tracking-[0.3em] font-medium">Powered by Dhasha Neural Engine</p>
+                            <p className="mt-4 text-center text-[8px] text-white/10 uppercase tracking-[0.4em] font-medium">Dhasha Media Core Engine v1.0</p>
                         </div>
                     </motion.div>
                 )}
             </AnimatePresence>
 
-            <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+            <button
                 onClick={toggleChat}
-                className={`group relative flex items-center justify-center w-16 h-16 rounded-2xl shadow-2xl transition-all duration-500 overflow-hidden border border-[#DAC291]/30 ${isOpen
-                    ? "bg-white/10 backdrop-blur-xl text-white rotate-90"
-                    : "bg-gradient-to-tr from-[#B89E6C] to-[#EAD7B0] text-black"
+                className={`flex items-center justify-center h-16 px-8 border transition-all duration-300 ${isOpen
+                    ? "bg-black border-white/20 text-white"
+                    : "bg-white border-white text-black font-black uppercase text-[10px] tracking-[0.3em] hover:scale-105 active:scale-95"
                     }`}
                 aria-label={isOpen ? "Close Chat" : "Open Chat"}
             >
-                <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-                {isOpen ? <X size={28} /> : <MessageCircle size={28} />}
-            </motion.button>
+                {isOpen ? "Close" : "Chat"}
+            </button>
         </div>
     );
 }
