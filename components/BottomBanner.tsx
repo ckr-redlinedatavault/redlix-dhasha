@@ -1,52 +1,54 @@
-'use client';
+import Image from "next/image";
 
-import { Bricolage_Grotesque } from 'next/font/google';
-
-const bricolage = Bricolage_Grotesque({
-    subsets: ['latin'],
-    display: 'swap',
-});
-
-export default function BottomBanner() {
-    const currentYear = new Date().getFullYear();
-
+const BottomBanner = () => {
     return (
-        <div className={`${bricolage.className} bg-black py-10 border-t border-white/10`}>
-            <div className="max-w-6xl mx-auto px-6">
-                <div className="flex flex-col md:flex-row justify-between items-start gap-8">
-                    <div className="space-y-2">
-                        <p className="text-xs font-normal tracking-wider text-[#DAC291]">
-                            © {currentYear} Dhasha Media. All rights reserved.
-                        </p>
-                        <p className="text-[11px] font-normal text-white tracking-tight leading-relaxed">
-                            The gold standard in media infrastructure and professional production.
-                        </p>
-                    </div>
-                    <div className="flex flex-col items-start md:items-end gap-4">
-                        <div className="flex flex-wrap gap-6">
-                            <span className="text-[10px] font-normal uppercase tracking-[0.2em] text-white">
-                                Nationwide Coverage
+        <footer className="w-full bg-[#DAC291] border-t border-black/5 py-8 pb-14 md:pb-8 font-sans">
+            <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-12">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-6">
+                    <div className="flex flex-col sm:flex-row items-center gap-5 sm:gap-10">
+                        <div className="flex items-center gap-3">
+                            <span className="text-black/60 text-[10px] uppercase tracking-[0.25em] font-bold">
+                                Technical Partner
                             </span>
-                            <span className="text-[10px] font-normal uppercase tracking-[0.2em] text-white">
-                                10-Minute Delivery
-                            </span>
-                        </div>
-
-                        <p className="text-[10px] font-normal text-white tracking-widest uppercase">
-                            Designed & Developed by{' '}
                             <a
-                                href="https://www.redlix.co.in/"
+                                href="https://redlix.co.in"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-[#DAC291] hover:text-white transition-all underline underline-offset-8 decoration-[#DAC291]/50"
+                                className="flex items-center transition-all duration-300 ease-in-out"
                             >
-                                Redlix
+                                <Image
+                                    src="https://res.cloudinary.com/dsqqrpzfl/image/upload/v1772213103/Screenshot_2026-02-27_at_22.54.43-removebg-preview_jeh6kc.png"
+                                    alt="Technical Partner Logo"
+                                    width={120}
+                                    height={32}
+                                    className="h-8 w-auto mix-blend-multiply transition-transform hover:scale-105 duration-300"
+                                />
                             </a>
-                        </p>
+                        </div>
+
+                        <div className="hidden sm:block h-5 w-[1px] bg-black/10" />
+
+                        <div className="flex items-center gap-2.5 text-black/80">
+                            <span className="text-[12px] font-bold tracking-wide">
+                                Designed and Maintained by Redlix Systems
+                            </span>
+                        </div>
                     </div>
 
+                    <div className="flex flex-wrap items-center justify-center md:justify-end gap-4">
+                        <a
+                            href="https://redlix.co.in/support"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-6 py-2 bg-black text-white hover:bg-black/90 transition-all duration-300 text-[13px] font-bold rounded-none shadow-xl"
+                        >
+                            Help & Support
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </footer>
     );
-}
+};
+
+export default BottomBanner;
