@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Bricolage_Grotesque } from 'next/font/google';
 import { FlipWords } from './FlipWords';
+import Link from 'next/link';
 
 const bricolage = Bricolage_Grotesque({
     subsets: ['latin'],
@@ -41,7 +42,7 @@ export default function HeroWithCards() {
     const [cards, setCards] = useState(initialCards);
     const middleIndex = Math.floor(cards.length / 2);
     const videoRefs = useRef<{ [key: string]: HTMLVideoElement }>({});
-    
+
     // Swipe/Drag State
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
@@ -97,7 +98,7 @@ export default function HeroWithCards() {
         if (index === middleIndex) rotateNext();
     };
 
-    
+
     const onStart = (clientX: number) => {
         setIsDragging(true);
         setStartX(clientX);
@@ -110,7 +111,7 @@ export default function HeroWithCards() {
 
     const onEnd = () => {
         if (!isDragging) return;
-        
+
         if (dragDistance < -minSwipeDistance) {
             rotateNext();
         } else if (dragDistance > minSwipeDistance) {
@@ -123,7 +124,7 @@ export default function HeroWithCards() {
 
     return (
         <section className={`${bricolage.className} relative z-0 min-h-screen bg-black overflow-hidden flex flex-col items-center pt-28 md:pt-40 pb-12 select-none`}>
-            
+
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-[#DAC291]/5 blur-[160px] rounded-full" />
             </div>
@@ -151,11 +152,11 @@ export default function HeroWithCards() {
                 </div>
 
                 <div
-                    
+
                     onTouchStart={(e) => onStart(e.touches[0].clientX)}
                     onTouchMove={(e) => onMove(e.touches[0].clientX)}
                     onTouchEnd={onEnd}
-                  
+
                     onMouseDown={(e) => onStart(e.clientX)}
                     onMouseMove={(e) => onMove(e.clientX)}
                     onMouseUp={onEnd}
@@ -167,7 +168,7 @@ export default function HeroWithCards() {
                         const isCenter = index === middleIndex;
                         const distFromCenter = Math.abs(index - middleIndex);
 
-                        let widthClass = 'w-14 md:w-32 lg:w-40'; 
+                        let widthClass = 'w-14 md:w-32 lg:w-40';
                         let opacityClass = 'opacity-30';
                         let zIndex = 10;
                         let scaleClass = 'scale-90';
@@ -219,6 +220,15 @@ export default function HeroWithCards() {
                             </div>
                         );
                     })}
+                </div>
+
+                <div className="mt-10 md:mt-16">
+                    <Link
+                        href="https://bookings.dhashamedia.com/booking/7bee9ed4-6530-4e3d-b89e-98356b0bf47e"
+                        className="inline-block bg-gradient-to-r from-[#B89E6C] via-[#DAC291] to-[#EAD7B0] text-gray-900 px-8 py-3.5 rounded-full font-bold text-sm uppercase tracking-wider shadow-lg hover:shadow-[#DAC291]/30 hover:scale-105 transition-all duration-300"
+                    >
+                        Book Reel
+                    </Link>
                 </div>
             </div>
         </section>
