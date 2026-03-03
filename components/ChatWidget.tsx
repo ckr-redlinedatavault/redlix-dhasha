@@ -1,7 +1,8 @@
 "use client";
 
-import { MessageCircle, X, Send, Bot } from "lucide-react";
+import { MessageCircle, X, Send, Sparkles, Cpu } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 type Message = {
     id: number;
@@ -17,23 +18,24 @@ const PREDEFINED_QUESTIONS = [
 ];
 
 const BOT_RESPONSES: { [key: string]: string } = {
-    default: "I am an AI assistant. For specific inquiries, please contact our support team or browse our services via the menu.",
-    services: "We offer a 10-in-1 media solution including Reels shoots, YouTube vlogs, Podcast production, News & media content, Brand marketing, Wedding shoots, and more. All delivered insanely fast.",
-    pricing: "Our pricing is tailored to your needs. Please visit our 'Pricing' section or contact us for a custom quote.",
-    delivery: "We are the World's First platform to shoot, edit, and deliver reels in just 10 minutes! Speed is our defining feature.",
+    default: "I am the Dhasha AI assistant. For specific inquiries, please contact our support team or browse our services via the menu.",
+    services: "We offer a 10-in-1 media solution including Reels shoots, YouTube vlogs, Podcast production, News & media content, Brand marketing, Wedding shoots, and more. All delivered in record time.",
+    pricing: "Our pricing is tailored to your production needs. Please visit our 'Pricing' section or contact us for a personalized quote.",
+    delivery: "We are the first platform to shoot, edit, and deliver reels in just 10 minutes! Our speed is our signature.",
     human: "You can reach our team directly at contact@dhashamedia.com or book a session via the 'Contact Us' page.",
-    hello: "Hello! How can I assist you with Dhasha Media today?",
-    hi: "Hi there! Ready to create some amazing content?",
+    hello: "Greetings! I'm Dhasha AI. How can I help you define your digital legacy today?",
+    hi: "Hi there! Ready to create content that stands out?",
 };
 
 export default function ChatWidget() {
     const [isOpen, setIsOpen] = useState(false);
+    const [isTyping, setIsTyping] = useState(false);
     const [inputValue, setInputValue] = useState("");
     const [messages, setMessages] = useState<Message[]>([
-        { id: 1, text: "Hello! How can we help you today?", sender: 'bot' }
+        { id: 1, text: "Welcome to Dhasha Media. I am your AI production assistant. How can I help you today?", sender: 'bot' }
     ]);
     const messagesEndRef = useRef<HTMLDivElement>(null);
-    const idCounter = useRef(2); 
+    const idCounter = useRef(2);
 
     const toggleChat = () => setIsOpen(!isOpen);
 
@@ -45,7 +47,7 @@ export default function ChatWidget() {
         if (isOpen) {
             scrollToBottom();
         }
-    }, [messages, isOpen]);
+    }, [messages, isOpen, isTyping]);
 
     const getBotResponse = (input: string) => {
         const lowerInput = input.toLowerCase();
@@ -60,7 +62,7 @@ export default function ChatWidget() {
     };
 
     const handleSendMessage = (text: string) => {
-        if (!text.trim()) return;
+        if (!text.trim() || isTyping) return;
 
         const newId = idCounter.current++;
         const newUserMessage: Message = {
@@ -71,6 +73,7 @@ export default function ChatWidget() {
 
         setMessages(prev => [...prev, newUserMessage]);
         setInputValue("");
+        setIsTyping(true);
 
         setTimeout(() => {
             const botResponseText = getBotResponse(text);
@@ -81,7 +84,8 @@ export default function ChatWidget() {
                 sender: 'bot',
             };
             setMessages(prev => [...prev, newBotMessage]);
-        }, 600);
+            setIsTyping(false);
+        }, 1500);
     };
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -92,92 +96,124 @@ export default function ChatWidget() {
 
     return (
         <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end">
-   
-            {isOpen && (
-                <div className="mb-4 w-[90vw] sm:w-[420px] h-[600px] max-h-[80vh] bg-black border border-[#DAC291]/20 rounded-2xl shadow-2xl overflow-hidden flex flex-col animate-in slide-in-from-bottom-5 fade-in duration-300">
-                    
-                    <div className="bg-[#DAC291] p-5 flex items-center justify-between shrink-0">
-                        <div className="flex items-center gap-3">
-                            <div className="p-2 bg-black/10 rounded-full">
-                                <Bot size={24} className="text-black" />
-                            </div>
-                            <div>
-                                <h3 className="text-black font-bold text-xl">Dhasha AI</h3>
-                                <p className="text-black/70 text-sm font-medium">Online • Replies instantly</p>
-                            </div>
-                        </div>
-                        <button
-                            onClick={toggleChat}
-                            className="text-black hover:bg-black/10 rounded-full p-1.5 transition-colors"
-                        >
-                            <X size={22} />
-                        </button>
-                    </div>
-
-                    <div className="flex-1 bg-black p-5 overflow-y-auto space-y-4 scrollbar-thin scrollbar-thumb-[#DAC291]/20 scrollbar-track-transparent">
-
-                        {messages.map((msg) => (
-                            <div key={msg.id} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-                                <div className={`
-                                    max-w-[85%] p-3.5 text-sm leading-relaxed rounded-2xl
-                                    ${msg.sender === 'user'
-                                        ? 'bg-[#DAC291] text-black rounded-tr-none font-medium'
-                                        : 'bg-[#1A1A1A] border border-[#DAC291]/10 text-white/90 rounded-tl-none'}
-                                `}>
-                                    {msg.text}
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 20, scale: 0.95 }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        className="mb-4 w-[90vw] sm:w-[420px] h-[600px] max-h-[80vh] bg-black/90 border border-[#DAC291]/30 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-xl overflow-hidden flex flex-col"
+                    >
+                        <div className="relative p-6 flex items-center justify-between shrink-0 overflow-hidden">
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#DAC291]/10 to-transparent pointer-events-none" />
+                            <div className="flex items-center gap-4 relative z-10">
+                                <div className="relative">
+                                    <div className="w-12 h-12 bg-gradient-to-tr from-[#B89E6C] to-[#EAD7B0] rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(218,194,145,0.3)]">
+                                        <Cpu size={24} className="text-black" />
+                                    </div>
+                                    <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-[#DAC291] rounded-full border-4 border-black animate-pulse" />
+                                </div>
+                                <div>
+                                    <h3 className="text-white font-bold text-lg tracking-tight flex items-center gap-2">
+                                        Dhasha AI <Sparkles size={14} className="text-[#DAC291]" />
+                                    </h3>
+                                    <p className="text-[#DAC291]/60 text-xs font-medium uppercase tracking-widest">Neural assistant active</p>
                                 </div>
                             </div>
-                        ))}
-
-                        <div ref={messagesEndRef} />
-                    </div>
-
-                    <div className="px-4 py-2 bg-black border-t border-[#DAC291]/5 overflow-x-auto whitespace-nowrap scrollbar-hide">
-                        <div className="flex gap-2">
-                            {PREDEFINED_QUESTIONS.map((q, i) => (
-                                <button
-                                    key={i}
-                                    onClick={() => handleSendMessage(q)}
-                                    className="inline-block px-3 py-1.5 rounded-full border border-[#DAC291]/30 bg-[#DAC291]/5 text-[#DAC291] text-xs font-medium hover:bg-[#DAC291] hover:text-black transition-all"
-                                >
-                                    {q}
-                                </button>
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className="p-4 bg-black border-t border-[#DAC291]/10 shrink-0">
-                        <div className="flex gap-2">
-                            <input
-                                type="text"
-                                value={inputValue}
-                                onChange={(e) => setInputValue(e.target.value)}
-                                onKeyDown={handleKeyDown}
-                                placeholder="Ask us anything..."
-                                className="flex-1 bg-[#1A1A1A] border border-[#DAC291]/20 rounded-full px-5 py-3 text-white text-sm focus:outline-none focus:border-[#DAC291] transition-colors"
-                            />
                             <button
-                                onClick={() => handleSendMessage(inputValue)}
-                                disabled={!inputValue.trim()}
-                                className="bg-[#DAC291] text-black w-11 h-11 flex items-center justify-center rounded-full hover:bg-[#C5AE7E] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                                onClick={toggleChat}
+                                className="text-white/40 hover:text-white bg-white/5 hover:bg-white/10 rounded-full p-2 transition-all relative z-10"
                             >
-                                <Send size={18} />
+                                <X size={20} />
                             </button>
                         </div>
-                    </div>
-                </div>
-            )}
 
-            <button
+                        <div className="flex-1 px-6 py-4 overflow-y-auto space-y-6 scrollbar-thin scrollbar-thumb-[#DAC291]/10 scrollbar-track-transparent">
+                            {messages.map((msg) => (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    key={msg.id}
+                                    className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+                                >
+                                    <div className={`
+                                        max-w-[85%] px-5 py-3.5 text-sm leading-relaxed rounded-3xl
+                                        ${msg.sender === 'user'
+                                            ? 'bg-gradient-to-tr from-[#B89E6C] to-[#DAC291] text-black rounded-tr-none font-semibold shadow-lg shadow-[#DAC291]/5'
+                                            : 'bg-zinc-900/50 border border-white/5 text-white/90 rounded-tl-none backdrop-blur-sm'}
+                                    `}>
+                                        {msg.text}
+                                    </div>
+                                </motion.div>
+                            ))}
+                            {isTyping && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    className="flex justify-start"
+                                >
+                                    <div className="bg-zinc-900/50 border border-white/5 p-4 rounded-3xl rounded-tl-none backdrop-blur-sm flex gap-1.5">
+                                        <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity, duration: 1 }} className="w-1.5 h-1.5 bg-[#DAC291] rounded-full" />
+                                        <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity, duration: 1, delay: 0.2 }} className="w-1.5 h-1.5 bg-[#DAC291] rounded-full" />
+                                        <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity, duration: 1, delay: 0.4 }} className="w-1.5 h-1.5 bg-[#DAC291] rounded-full" />
+                                    </div>
+                                </motion.div>
+                            )}
+                            <div ref={messagesEndRef} />
+                        </div>
+
+                        <div className="px-6 py-3 border-t border-white/5 overflow-x-auto whitespace-nowrap scrollbar-hide shrink-0">
+                            <div className="flex gap-2">
+                                {PREDEFINED_QUESTIONS.map((q, i) => (
+                                    <button
+                                        key={i}
+                                        onClick={() => handleSendMessage(q)}
+                                        className="inline-block px-4 py-2 rounded-xl border border-[#DAC291]/20 bg-[#DAC291]/5 text-[#DAC291] text-[10px] font-bold uppercase tracking-wider hover:bg-[#DAC291] hover:text-black transition-all"
+                                    >
+                                        {q}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="p-6 shrink-0">
+                            <div className="relative flex items-center">
+                                <input
+                                    type="text"
+                                    value={inputValue}
+                                    onChange={(e) => setInputValue(e.target.value)}
+                                    onKeyDown={handleKeyDown}
+                                    placeholder="Type a message..."
+                                    className="w-full bg-zinc-900/50 border border-white/10 rounded-2xl px-6 py-4 text-white text-sm focus:outline-none focus:border-[#DAC291]/50 transition-all backdrop-blur-md placeholder:text-white/20"
+                                />
+                                <button
+                                    onClick={() => handleSendMessage(inputValue)}
+                                    disabled={!inputValue.trim() || isTyping}
+                                    className="absolute right-2 bg-[#DAC291] text-black w-10 h-10 flex items-center justify-center rounded-xl hover:bg-[#EAD7B0] transition-all disabled:opacity-20 disabled:scale-95 shadow-lg shadow-[#DAC291]/10"
+                                >
+                                    <Send size={18} />
+                                </button>
+                            </div>
+                            <p className="mt-3 text-center text-[9px] text-white/20 uppercase tracking-[0.3em] font-medium">Powered by Dhasha Neural Engine</p>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={toggleChat}
-                className={`flex items-center justify-center w-14 h-14 rounded-full shadow-2xl transition-all duration-300 border border-[#DAC291]/20 ${isOpen
-                    ? "bg-black text-[#DAC291] rotate-90"
-                    : "bg-[#DAC291] text-black hover:scale-110 active:scale-95"
+                className={`group relative flex items-center justify-center w-16 h-16 rounded-2xl shadow-2xl transition-all duration-500 overflow-hidden border border-[#DAC291]/30 ${isOpen
+                    ? "bg-white/10 backdrop-blur-xl text-white rotate-90"
+                    : "bg-gradient-to-tr from-[#B89E6C] to-[#EAD7B0] text-black"
                     }`}
                 aria-label={isOpen ? "Close Chat" : "Open Chat"}
             >
-                {isOpen ? <X size={28} strokeWidth={2} /> : <MessageCircle size={28} strokeWidth={2} />}
-            </button>
+                <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+                {isOpen ? <X size={28} /> : <MessageCircle size={28} />}
+            </motion.button>
         </div>
     );
 }
