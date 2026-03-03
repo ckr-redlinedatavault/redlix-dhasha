@@ -18,7 +18,6 @@ export default function Navbar() {
     { name: 'Home', href: '/' },
     { name: 'Our Story', href: '/our-story' },
     { name: 'Our Ecosystem', href: '/our-ecosystem' },
-    { name: 'Studio', href: '/studio' },
     { name: 'Creators', href: '/join-creator' },
     { name: 'How it works', href: '/how-it-works' },
   ];
@@ -52,6 +51,12 @@ export default function Navbar() {
             </div>
 
             <div className="flex items-center space-x-3">
+              <Link
+                href="https://bookings.dhashamedia.com/booking/7bee9ed4-6530-4e3d-b89e-98356b0bf47e"
+                className="bg-gray-900 text-[#DAC291] px-5 py-2.5 rounded-full font-bold text-sm hover:bg-black transition-all shadow-lg shadow-black/10"
+              >
+                Book Reel
+              </Link>
               <Link href="https://bookings.dhashamedia.com/contact" className="flex items-center gap-2 bg-transparent border border-gray-900/20 text-gray-900 px-4 py-2 rounded-full font-semibold text-sm hover:bg-black/5 transition-all">
                 <Mail size={16} />
                 Contact Us
@@ -64,12 +69,12 @@ export default function Navbar() {
               </button>
             </div>
           </div>
-          <div className="lg:hidden flex items-center gap-4">
+          <div className="lg:hidden flex items-center gap-3">
             <Link
-              href="/studio"
-              className="bg-gray-900 text-[#DAC291] px-4 py-1.5 rounded-full font-bold text-xs uppercase tracking-wider shadow-lg"
+              href="https://bookings.dhashamedia.com/booking/7bee9ed4-6530-4e3d-b89e-98356b0bf47e"
+              className="bg-gray-900 text-[#DAC291] px-4 py-2 rounded-full font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-black transition-all"
             >
-              Studio
+              Book Reel
             </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -130,7 +135,7 @@ export default function Navbar() {
             </p>
 
             <div className="flex flex-col gap-3">
-            
+
               <button className="bg-black text-white w-full py-3 rounded-xl flex items-center justify-center gap-3 transition-transform active:scale-95 group">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/Apple_logo_white.svg" alt="Apple" className="h-6 w-auto" />
                 <div className="text-left leading-none">
@@ -141,7 +146,7 @@ export default function Navbar() {
 
               <button className="bg-black text-white w-full py-3 rounded-xl flex items-center justify-center gap-3 transition-transform active:scale-95 group">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" className="h-8 w-auto scale-110" />
-               
+
               </button>
             </div>
 
