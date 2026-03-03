@@ -1,5 +1,6 @@
 "use client";
 
+import { MessageCircle, X } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -186,13 +187,13 @@ export default function ChatWidget() {
 
             <button
                 onClick={toggleChat}
-                className={`flex items-center justify-center h-16 px-8 border transition-all duration-300 ${isOpen
+                className={`flex items-center justify-center w-14 h-14 border transition-all duration-300 shadow-xl ${isOpen
                     ? "bg-black border-white/20 text-white"
-                    : "bg-white border-white text-black font-black uppercase text-[10px] tracking-[0.3em] hover:scale-105 active:scale-95"
+                    : "bg-[#DAC291] border-[#DAC291] text-black hover:scale-105 active:scale-95"
                     }`}
                 aria-label={isOpen ? "Close Chat" : "Open Chat"}
             >
-                {isOpen ? "Close" : "Chat"}
+                {isOpen ? <X size={24} /> : <MessageCircle size={24} />}
             </button>
         </div>
     );
