@@ -81,7 +81,7 @@ export default function Ecosystem() {
         <main className={`${bricolage.className} bg-black min-h-screen text-white selection:bg-[#DAC291] selection:text-black antialiased`}>
             <Navbar />
 
-            {/* Hero Section - Clean & Left Aligned */}
+            
             <section className="relative pt-32 pb-12 overflow-hidden bg-black">
                 <div className="absolute top-0 left-0 w-[40%] h-[40%] bg-[#DAC291]/5 blur-[120px] rounded-full pointer-events-none" />
 
@@ -103,7 +103,7 @@ export default function Ecosystem() {
                 </div>
             </section>
 
-            {/* Solutions Grid - Compact Cards */}
+            
             <section className="pb-20 px-6">
                 <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {solutions.map((item, index) => (
@@ -112,14 +112,14 @@ export default function Ecosystem() {
                             key={index}
                             className="group relative h-[380px] rounded-2xl bg-zinc-950/50 border border-white/5 hover:border-[#DAC291]/30 transition-all duration-500 overflow-hidden flex flex-col"
                         >
-                            {/* Card Label */}
+                            
                             <div className="absolute top-6 left-6 z-20">
                                 <span className="text-[9px] font-normal tracking-widest text-white/20 uppercase">
                                     Solution {(index + 1).toString().padStart(2, '0')}
                                 </span>
                             </div>
 
-                            {/* Image Section */}
+                            
                             <div className="flex-1 relative flex items-center justify-center p-8">
                                 <img
                                     src={item.image}
@@ -128,7 +128,7 @@ export default function Ecosystem() {
                                 />
                             </div>
 
-                            {/* Content Section */}
+                            
                             <div className="p-8 pt-0 relative z-10">
                                 <h3 className="text-xl font-normal mb-2 tracking-tight group-hover:text-[#DAC291] transition-colors">
                                     {item.title}
@@ -138,7 +138,7 @@ export default function Ecosystem() {
                                 </p>
                             </div>
 
-                            {/* Minimal Arrow */}
+                            
                             <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
                                 <ArrowRight size={16} className="text-[#DAC291]" />
                             </div>
@@ -147,7 +147,7 @@ export default function Ecosystem() {
                 </div>
             </section>
 
-            {/* Final CTA - Clean Portal */}
+            
             <section className="py-20 relative overflow-hidden bg-black border-t border-white/5">
                 <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
                     <div className="inline-flex items-center justify-center w-14 h-14 rounded-full border border-white/10 mb-8">

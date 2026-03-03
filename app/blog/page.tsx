@@ -42,7 +42,7 @@ export default function Blog() {
         <main className={`${bricolage.className} bg-black min-h-screen text-white overflow-x-hidden`}>
             <Navbar />
 
-            {/* Hero */}
+            
             <section className="relative pt-40 pb-20 px-6">
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#DAC291]/5 rounded-full blur-[140px] pointer-events-none"></div>
 
@@ -57,17 +57,16 @@ export default function Blog() {
                 </div>
             </section>
 
-            {/* Blog Grid */}
+            
             <section className="pb-32 px-6">
                 <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {BLOG_POSTS.map((post) => (
                         <div key={post.id} className="group cursor-pointer">
                             <div className="bg-zinc-900/40 border border-white/5 rounded-[2rem] overflow-hidden hover:border-[#DAC291]/30 transition-all h-full flex flex-col">
-                                {/* Image Placeholder */}
+                                
                                 <div className="h-48 overflow-hidden relative">
                                     <div className="absolute inset-0 bg-gray-800">
-                                        {/* Using a solid color fallback to avoid broken image issues if unspash links break, 
-                                            but technically the img tag below covers it */}
+                                        
                                         <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                     </div>
                                     <div className="absolute top-4 left-4 bg-black/50 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-bold">

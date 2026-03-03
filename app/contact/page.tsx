@@ -20,7 +20,7 @@ export default function Contact() {
 
                 <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-start">
 
-                    {/* Left Column: Text & CTA */}
+                    
                     <div className="w-full md:w-1/2 relative z-10 text-center md:text-left">
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[#DAC291] text-[10px] font-bold uppercase tracking-[0.2em] mb-8">
                             <Mail size={12} /> Get in Touch
@@ -40,10 +40,10 @@ export default function Contact() {
                         </a>
                     </div>
 
-                    {/* Right Column: Contact Cards */}
+                    
                     <div className="w-full md:w-1/2 flex flex-col gap-6">
 
-                        {/* Email Card */}
+                        
                         <div className="bg-zinc-900/40 border border-white/5 p-8 rounded-[2rem] hover:border-[#DAC291]/30 transition-all group">
                             <div className="flex items-center gap-6">
                                 <div className="w-12 h-12 bg-black rounded-2xl flex items-center justify-center text-[#DAC291] border border-white/5 group-hover:scale-110 transition-transform shrink-0">
@@ -59,7 +59,7 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        {/* Phone/Office Card */}
+                        
                         <div className="bg-zinc-900/40 border border-white/5 p-8 rounded-[2rem] hover:border-[#DAC291]/30 transition-all group">
                             <div className="flex items-center gap-6">
                                 <div className="w-12 h-12 bg-black rounded-2xl flex items-center justify-center text-[#DAC291] border border-white/5 group-hover:scale-110 transition-transform shrink-0">
@@ -78,7 +78,7 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        {/* Socials Card */}
+                        
                         <div className="bg-zinc-900/40 border border-white/5 p-8 rounded-[2rem] hover:border-[#DAC291]/30 transition-all group">
                             <div className="flex items-center gap-6">
                                 <div className="w-12 h-12 bg-black rounded-2xl flex items-center justify-center text-[#DAC291] border border-white/5 group-hover:scale-110 transition-transform shrink-0">

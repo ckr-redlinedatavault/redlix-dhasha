@@ -30,9 +30,9 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
         <main className={`${bricolage.className} min-h-screen bg-[#050505] text-white overflow-x-hidden`}>
             <Navbar />
 
-            {/* Hero Section: Cinematic Style */}
+            
             <div className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-                {/* Background Image with Layered Overlays */}
+                
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-[#050505] z-10" />
                     <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black z-10" />
@@ -43,9 +43,9 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
                     />
                 </div>
 
-                {/* Content */}
+                
                 <div className="relative z-20 max-w-5xl mx-auto px-6 text-center w-full">
-                    {/* Breadcrumbs */}
+                    
                     <div className="absolute top-8 left-6 md:left-12 z-30 inline-flex items-center gap-3 px-4 py-2 rounded-full border border-white/10 bg-black/20 backdrop-blur-md">
                         <Link href="/" className="text-[10px] uppercase tracking-widest text-gray-400 hover:text-white transition-colors">Home</Link>
                         <div className="w-1 h-1 rounded-full bg-[#DAC291]" />
@@ -73,17 +73,17 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
                     </p>
                 </div>
 
-                {/* Scroll Indicator */}
+                
                 <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 hidden md:block">
                     <div className="w-[1px] h-20 bg-gradient-to-b from-transparent via-[#DAC291] to-transparent animate-pulse" />
                 </div>
             </div>
 
-            {/* Details Section */}
+            
             <section className="py-24 px-6 relative">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
 
-                    {/* Left Side: Story & Benefits */}
+                    
                     <div className="lg:col-span-7">
                         <div className="space-y-12">
                             <div>
@@ -107,11 +107,11 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
                         </div>
                     </div>
 
-                    {/* Right Side: Features Card (The "Package") */}
+                    
                     <div className="lg:col-span-5">
                         <div className="sticky top-32 p-1 bg-gradient-to-b from-white/10 to-transparent rounded-[2.5rem]">
                             <div className="bg-[#0A0A0A] rounded-[2.4rem] p-8 md:p-12 relative overflow-hidden">
-                                {/* Decorative Glow */}
+                                
                                 <div className="absolute -top-20 -right-20 w-64 h-64 bg-[#DAC291]/10 blur-[80px] rounded-full pointer-events-none" />
 
                                 <div className="flex items-center justify-between mb-10">
@@ -137,7 +137,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
                                     <span className="relative z-10 flex items-center justify-center gap-3 text-xs uppercase tracking-widest">
                                         Book Creator<MoveRight size={18} className="group-hover:translate-x-2 transition-transform" />
                                     </span>
-                                    {/* Hover Shine Effect */}
+                                    
                                     <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
                                 </button>
 
@@ -151,7 +151,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
                 </div>
             </section>
 
-            {/* CTA / Next Steps */}
+            
             <section className="py-32 border-t border-white/5">
                 <div className="max-w-4xl mx-auto px-6 text-center">
                     <h2 className="text-4xl md:text-6xl font-light mb-12 tracking-tight">

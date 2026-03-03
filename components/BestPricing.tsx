@@ -36,7 +36,7 @@ export default function Pricing() {
 
     return (
         <section className={`${bricolage.className} py-16 bg-black text-white relative overflow-hidden`}>
-            {/* Subtle Background Glow */}
+            
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[#DAC291]/5 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">

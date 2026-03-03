@@ -16,7 +16,7 @@ export default function PricingModal({ isOpen, onClose, pricing, serviceTitle }:
     if (!isOpen) return null;
 
     const handleSelectPlan = (planName: string) => {
-        // Redirect to booking with pre-filled context if possible (for now just direct link)
+        
         window.location.href = 'https://bookings.dhashamedia.com/booking/7bee9ed4-6530-4e3d-b89e-98356b0bf47e';
     };
 
@@ -24,7 +24,7 @@ export default function PricingModal({ isOpen, onClose, pricing, serviceTitle }:
         <AnimatePresence>
             {isOpen && (
                 <>
-                    {/* Backdrop */}
+                    
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -33,7 +33,7 @@ export default function PricingModal({ isOpen, onClose, pricing, serviceTitle }:
                         className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50"
                     />
 
-                    {/* Modal */}
+                    
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -41,7 +41,7 @@ export default function PricingModal({ isOpen, onClose, pricing, serviceTitle }:
                         className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none"
                     >
                         <div className="bg-[#0A0A0A] border border-white/10 w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-3xl p-6 md:p-10 pointer-events-auto shadow-2xl relative">
-                            {/* Close Button */}
+                            
                             <button
                                 onClick={onClose}
                                 className="absolute top-6 right-6 p-2 rounded-full bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-colors"

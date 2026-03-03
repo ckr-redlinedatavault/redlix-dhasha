@@ -95,7 +95,7 @@ export default function ChatWidget() {
    
             {isOpen && (
                 <div className="mb-4 w-[90vw] sm:w-[420px] h-[600px] max-h-[80vh] bg-black border border-[#DAC291]/20 rounded-2xl shadow-2xl overflow-hidden flex flex-col animate-in slide-in-from-bottom-5 fade-in duration-300">
-                    {/* Header */}
+                    
                     <div className="bg-[#DAC291] p-5 flex items-center justify-between shrink-0">
                         <div className="flex items-center gap-3">
                             <div className="p-2 bg-black/10 rounded-full">

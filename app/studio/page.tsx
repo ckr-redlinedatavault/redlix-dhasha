@@ -30,7 +30,7 @@ export default function StudioPage() {
         <main className={`${bricolage.className} min-h-screen bg-black text-white selection:bg-[#DAC291] selection:text-black antialiased`}>
             <Navbar />
 
-            {/* Hero Section - Left Aligned & Clean */}
+            
             <section className="relative pt-32 pb-16 overflow-hidden bg-black">
                 <div className="absolute top-0 left-0 w-[40%] h-[40%] bg-[#DAC291]/5 blur-[120px] rounded-full pointer-events-none" />
 
@@ -64,7 +64,7 @@ export default function StudioPage() {
                 </div>
             </section>
 
-            {/* Core Values - Left Aligned */}
+            
             <section className="py-16 bg-zinc-950/40 border-y border-white/5">
                 <div className="max-w-6xl mx-auto px-6">
                     <div className="grid md:grid-cols-3 gap-12">
@@ -93,7 +93,7 @@ export default function StudioPage() {
                 </div>
             </section>
 
-            {/* Registration Workflow - Compact Grid */}
+            
             <section id="workflow" className="py-20 bg-[#DAC291] text-black">
                 <div className="max-w-6xl mx-auto px-6">
                     <div className="max-w-2xl mb-12">
@@ -124,7 +124,7 @@ export default function StudioPage() {
                 </div>
             </section>
 
-            {/* Manual Verification Info */}
+            
             <section className="py-20 bg-black">
                 <div className="max-w-6xl mx-auto px-6">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -156,7 +156,7 @@ export default function StudioPage() {
                 </div>
             </section>
 
-            {/* Features / Unified OS */}
+            
             <section className="py-20 border-t border-white/5 bg-zinc-950">
                 <div className="max-w-6xl mx-auto px-6">
                     <div className="max-w-3xl mb-16">
@@ -182,7 +182,7 @@ export default function StudioPage() {
                 </div>
             </section>
 
-            {/* Final CTA - Simple */}
+            
             <section className="py-24 bg-black relative">
                 <div className="max-w-6xl mx-auto px-6 border-t border-white/5 pt-20">
                     <div className="max-w-2xl">

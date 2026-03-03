@@ -11,7 +11,7 @@ const bricolage = Bricolage_Grotesque({
     display: 'swap',
 });
 
-// Benefits Data
+
 const benefits = [
     {
         title: 'Premium Earnings',
@@ -30,7 +30,7 @@ const benefits = [
     }
 ];
 
-// Who we look for data
+
 const roles = [
     {
         title: 'Photographers',
@@ -70,7 +70,7 @@ export default function JoinCreator() {
         <main className={`${bricolage.className} bg-black min-h-screen text-white overflow-x-hidden`}>
             <Navbar />
 
-            {/* Hero Section */}
+            
             <section className="relative pt-40 pb-20 px-6 flex flex-col items-center text-center overflow-hidden">
                 <div className="absolute top-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-zinc-800 via-black to-black opacity-50 pointer-events-none"></div>
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#DAC291]/10 rounded-full blur-[140px] pointer-events-none"></div>
@@ -111,7 +111,7 @@ export default function JoinCreator() {
                 </motion.div>
             </section>
 
-            {/* Why Join Section */}
+            
             <section className="py-24 px-6 bg-zinc-900/20 border-y border-white/5">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
@@ -140,7 +140,7 @@ export default function JoinCreator() {
                 </div>
             </section>
 
-            {/* Who We Are Looking For */}
+            
             <section className="py-24 px-6">
                 <div className="max-w-6xl mx-auto">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
@@ -187,7 +187,7 @@ export default function JoinCreator() {
                 </div>
             </section>
 
-            {/* Final CTA */}
+            
             <section className="py-24 px-6 text-center">
                 <div className="max-w-3xl mx-auto bg-gradient-to-b from-zinc-900 to-black p-12 md:p-16 rounded-[3rem] border border-white/5 relative overflow-hidden">
                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>

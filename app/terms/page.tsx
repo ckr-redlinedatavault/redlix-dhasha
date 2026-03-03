@@ -15,7 +15,7 @@ export default function Terms() {
             <Navbar />
 
             <section className="relative pt-40 pb-20 px-6">
-                {/* Background ambient glow */}
+                
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#DAC291]/5 rounded-full blur-[140px] pointer-events-none opacity-50"></div>
                 <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#DAC291]/5 rounded-full blur-[100px] pointer-events-none opacity-30"></div>
 
@@ -31,18 +31,18 @@ export default function Terms() {
 
                     <div className="space-y-16 text-gray-300 font-light leading-relaxed text-base md:text-lg">
 
-                        {/* Introduction */}
+                        
                         <section className="bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-sm hover:border-[#DAC291]/30 transition-colors duration-500">
                             <h2 className="text-white text-2xl font-bold mb-4">1. Agreement to Terms</h2>
                             <p>
                                 These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity (“you”) and <strong className="text-white">Dhasha Media</strong> ("Dhasha Media", "we", "us", or "our"), an independent freelance collective. Please be advised that Dhasha Media is <strong>not a government-registered company</strong> but operates as a freelance consultancy providing creative and technical media solutions.
                             </p>
                             <p className="mt-4">
-                                By accessing the Site (<a href="https://www.dhashamedia.com/" className="text-[#DAC291] hover:underline decoration-[#DAC291]/50 underline-offset-4">https://www.dhashamedia.com/</a>) or engaging our freelance services, you confirm that you have read, understood, and agreed to be bound by all of these Terms of Service. If you do not agree, you must discontinue use immediately.
+                                By accessing the Site (<a href="https://www.dhashamedia.com/" className="text-[#DAC291] hover:underline decoration-[#DAC291]/50 underline-offset-4">https:
                             </p>
                         </section>
 
-                        {/* Services */}
+                        
                         <section>
                             <h2 className="text-3xl md:text-4xl font-medium text-white mb-8 flex items-center gap-3">
                                 <span className="w-2 h-8 bg-[#DAC291] rounded-sm inline-block"></span>
@@ -75,7 +75,7 @@ export default function Terms() {
                             </div>
                         </section>
 
-                        {/* Intellectual Property */}
+                        
                         <section>
                             <h2 className="text-3xl md:text-4xl font-medium text-white mb-6 flex items-center gap-3">
                                 <span className="w-2 h-8 bg-[#DAC291] rounded-sm inline-block"></span>
@@ -86,7 +86,7 @@ export default function Terms() {
                             </p>
                         </section>
 
-                        {/* User Representations */}
+                        
                         <section>
                             <h2 className="text-3xl md:text-4xl font-medium text-white mb-6 flex items-center gap-3">
                                 <span className="w-2 h-8 bg-[#DAC291] rounded-sm inline-block"></span>
@@ -103,7 +103,7 @@ export default function Terms() {
                             </ul>
                         </section>
 
-                        {/* Prohibited Activities */}
+                        
                         <section>
                             <h2 className="text-3xl md:text-4xl font-medium text-white mb-6 flex items-center gap-3">
                                 <span className="w-2 h-8 bg-[#DAC291] rounded-sm inline-block"></span>
@@ -114,7 +114,7 @@ export default function Terms() {
                             </p>
                         </section>
 
-                        {/* Governing Law */}
+                        
                         <section>
                             <h2 className="text-3xl md:text-4xl font-medium text-white mb-6 flex items-center gap-3">
                                 <span className="w-2 h-8 bg-[#DAC291] rounded-sm inline-block"></span>
@@ -125,7 +125,7 @@ export default function Terms() {
                             </p>
                         </section>
 
-                        {/* Contact Us */}
+                        
                         <section className="bg-white/[0.02] border border-white/5 rounded-2xl p-8 text-center">
                             <h2 className="text-2xl font-medium text-white mb-4">Contact Us</h2>
                             <p className="mb-6 text-gray-400">

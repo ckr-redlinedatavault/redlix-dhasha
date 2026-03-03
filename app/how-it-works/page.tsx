@@ -12,7 +12,7 @@ const bricolage = Bricolage_Grotesque({
     display: 'swap',
 });
 
-// Data for Steps
+
 const customerSteps = [
     {
         id: '01',
@@ -55,7 +55,7 @@ const creatorSteps = [
     }
 ];
 
-// Data for Pro Tips
+
 const customerTips = [
     "Book in advance for better availability and rates.",
     "Provide detailed requirements for the best results.",
@@ -77,7 +77,7 @@ export default function HowItWorks() {
         <main className={`${bricolage.className} bg-black min-h-screen text-white overflow-x-hidden`}>
             <Navbar />
 
-            {/* Hero Section */}
+            
             <section className="pt-40 pb-16 px-6 text-center relative z-10">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#DAC291]/10 rounded-full blur-[140px] pointer-events-none"></div>
                 <h1 className="text-4xl md:text-6xl font-medium mb-6 tracking-tight">
@@ -89,7 +89,7 @@ export default function HowItWorks() {
                 </p>
             </section>
 
-            {/* Toggle Switch */}
+            
             <section className="px-6 pb-20 relative z-10">
                 <div className="flex justify-center mb-16">
                     <div className="bg-zinc-900/50 p-1.5 rounded-full border border-white/10 backdrop-blur-sm flex gap-2">
@@ -108,7 +108,7 @@ export default function HowItWorks() {
                     </div>
                 </div>
 
-                {/* Steps Grid */}
+                
                 <div className="max-w-6xl mx-auto">
                     <AnimatePresence mode="wait">
                         <motion.div
@@ -138,7 +138,7 @@ export default function HowItWorks() {
                 </div>
             </section>
 
-            {/* Pro Tips Section */}
+            
             <section className="py-24 px-6 bg-zinc-900/20 border-t border-white/5">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
@@ -149,7 +149,7 @@ export default function HowItWorks() {
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-12">
-                        {/* Customer Tips */}
+                        
                         <div className="bg-black border border-white/10 rounded-[2.5rem] p-10 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-[80px]"></div>
                             <div className="flex items-center gap-4 mb-8">
@@ -166,7 +166,7 @@ export default function HowItWorks() {
                             </ul>
                         </div>
 
-                        {/* Creator Tips */}
+                        
                         <div className="bg-black border border-white/10 rounded-[2.5rem] p-10 relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/5 rounded-full blur-[80px]"></div>
                             <div className="flex items-center gap-4 mb-8">

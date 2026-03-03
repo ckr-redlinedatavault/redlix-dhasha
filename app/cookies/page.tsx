@@ -15,7 +15,7 @@ export default function Cookies() {
             <Navbar />
 
             <section className="relative pt-40 pb-20 px-6">
-                {/* Background ambient glow */}
+                
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#DAC291]/5 rounded-full blur-[140px] pointer-events-none opacity-50"></div>
                 <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#DAC291]/5 rounded-full blur-[100px] pointer-events-none opacity-30"></div>
 
@@ -31,10 +31,10 @@ export default function Cookies() {
 
                     <div className="space-y-16 text-gray-300 font-light leading-relaxed text-base md:text-lg">
 
-                        {/* Introduction */}
+                        
                         <section className="bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-sm hover:border-[#DAC291]/30 transition-colors duration-500">
                             <p className="mb-4">
-                                This Cookie Policy explains how Dhasha Media uses cookies and similar technologies to recognize you when you visit our website at <a href="https://www.dhashamedia.com/" className="text-[#DAC291] hover:underline underline-offset-4 decoration-[#DAC291]/50">https://www.dhashamedia.com/</a>. It explains what these technologies are and why we use them, as well as your rights to control our use of them.
+                                This Cookie Policy explains how Dhasha Media uses cookies and similar technologies to recognize you when you visit our website at <a href="https://www.dhashamedia.com/" className="text-[#DAC291] hover:underline underline-offset-4 decoration-[#DAC291]/50">https:
                             </p>
                         </section>
 

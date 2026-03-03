@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
         rules: {
             userAgent: '*',
             allow: '/',
-            disallow: ['/api/', '/admin/'], // Hypothetical admin/api paths to keep private
+            disallow: ['/api/', '/admin/'], 
         },
         sitemap: 'https://dhashamedia.com/sitemap.xml',
     };

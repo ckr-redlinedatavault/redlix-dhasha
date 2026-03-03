@@ -15,7 +15,7 @@ export default function Privacy() {
             <Navbar />
 
             <section className="relative pt-40 pb-20 px-6">
-                {/* Background ambient glow */}
+                
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#DAC291]/5 rounded-full blur-[140px] pointer-events-none opacity-50"></div>
                 <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#DAC291]/5 rounded-full blur-[100px] pointer-events-none opacity-30"></div>
 
@@ -31,17 +31,17 @@ export default function Privacy() {
 
                     <div className="space-y-16 text-gray-300 font-light leading-relaxed text-base md:text-lg">
 
-                        {/* Introduction */}
+                        
                         <section className="bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-sm hover:border-[#DAC291]/30 transition-colors duration-500">
                             <p className="mb-6">
-                                This Privacy Policy explains how <strong className="text-white">Dhasha Media</strong> (hereinafter referred to as “Dhasha Media,” “We,” “Us,” or “Our”), an independent freelance media consultancy, collects, uses, processes, stores, shares, and protects information belonging to users (“You,” “Your,” or “Users”) who access or use our services through our website <a href="https://www.dhashamedia.com/" className="text-[#DAC291] hover:underline underline-offset-4 decoration-[#DAC291]/50">https://www.dhashamedia.com/</a> (“Platform” or “Website”).
+                                This Privacy Policy explains how <strong className="text-white">Dhasha Media</strong> (hereinafter referred to as “Dhasha Media,” “We,” “Us,” or “Our”), an independent freelance media consultancy, collects, uses, processes, stores, shares, and protects information belonging to users (“You,” “Your,” or “Users”) who access or use our services through our website <a href="https://www.dhashamedia.com/" className="text-[#DAC291] hover:underline underline-offset-4 decoration-[#DAC291]/50">https:
                             </p>
                             <p>
                                 This Policy should be read together with our Terms of Use available at <a href="/terms" className="text-[#DAC291] hover:underline underline-offset-4 decoration-[#DAC291]/50">/terms</a>. By accessing or using our Website or Services, you acknowledge that you have read, understood, and agreed to the practices described in this Privacy Policy.
                             </p>
                         </section>
 
-                        {/* About Dhasha Media */}
+                        
                         <section>
                             <h2 className="text-3xl md:text-4xl font-medium text-white mb-6 flex items-center gap-3">
                                 <span className="w-2 h-8 bg-[#DAC291] rounded-sm inline-block"></span>
@@ -52,7 +52,7 @@ export default function Privacy() {
                             </p>
                         </section>
 
-                        {/* Legal Compliance */}
+                        
                         <section>
                             <h2 className="text-3xl md:text-4xl font-medium text-white mb-6 flex items-center gap-3">
                                 <span className="w-2 h-8 bg-[#DAC291] rounded-sm inline-block"></span>
@@ -69,7 +69,7 @@ export default function Privacy() {
                             </p>
                         </section>
 
-                        {/* Storage */}
+                        
                         <section>
                             <h2 className="text-3xl md:text-4xl font-medium text-white mb-6 flex items-center gap-3">
                                 <span className="w-2 h-8 bg-[#DAC291] rounded-sm inline-block"></span>
@@ -80,7 +80,7 @@ export default function Privacy() {
                             </p>
                         </section>
 
-                        {/* Information We Collect */}
+                        
                         <section>
                             <h2 className="text-3xl md:text-4xl font-medium text-white mb-8 flex items-center gap-3">
                                 <span className="w-2 h-8 bg-[#DAC291] rounded-sm inline-block"></span>
@@ -151,7 +151,7 @@ export default function Privacy() {
                             </div>
                         </section>
 
-                        {/* Purpose of Collecting */}
+                        
                         <section>
                             <h2 className="text-3xl md:text-4xl font-medium text-white mb-6 flex items-center gap-3">
                                 <span className="w-2 h-8 bg-[#DAC291] rounded-sm inline-block"></span>
@@ -177,7 +177,7 @@ export default function Privacy() {
                             </div>
                         </section>
 
-                        {/* When we collect info */}
+                        
                         <section>
                             <h2 className="text-3xl md:text-4xl font-medium text-white mb-6 flex items-center gap-3">
                                 <span className="w-2 h-8 bg-[#DAC291] rounded-sm inline-block"></span>
@@ -199,7 +199,7 @@ export default function Privacy() {
                             </ul>
                         </section>
 
-                        {/* Sources */}
+                        
                         <section className="grid grid-cols-1 md:grid-cols-2 gap-12">
                             <div>
                                 <h2 className="text-2xl font-medium text-white mb-4">Sources of Information</h2>
@@ -232,7 +232,7 @@ export default function Privacy() {
                             </div>
                         </section>
 
-                        {/* Sharing Info */}
+                        
                         <section>
                             <h2 className="text-3xl md:text-4xl font-medium text-white mb-6 flex items-center gap-3">
                                 <span className="w-2 h-8 bg-[#DAC291] rounded-sm inline-block"></span>
@@ -252,7 +252,7 @@ export default function Privacy() {
                             </div>
                         </section>
 
-                        {/* Refund Policy */}
+                        
                         <section id="refunds">
                             <h2 className="text-3xl md:text-4xl font-medium text-white mb-6 flex items-center gap-3">
                                 <span className="w-2 h-8 bg-[#DAC291] rounded-sm inline-block"></span>
@@ -271,7 +271,7 @@ export default function Privacy() {
                             </div>
                         </section>
 
-                        {/* Cookie Policy */}
+                        
                         <section>
                             <h2 className="text-3xl md:text-4xl font-medium text-white mb-6 flex items-center gap-3">
                                 <span className="w-2 h-8 bg-[#DAC291] rounded-sm inline-block"></span>
@@ -286,7 +286,7 @@ export default function Privacy() {
                             <p className="text-sm text-gray-500">You may disable cookies through your browser settings. However, disabling cookies may affect certain features of the Website. We are not responsible for cookies placed by third-party services.</p>
                         </section>
 
-                        {/* Your Rights */}
+                        
                         <section>
                             <h2 className="text-3xl md:text-4xl font-medium text-white mb-6 flex items-center gap-3">
                                 <span className="w-2 h-8 bg-[#DAC291] rounded-sm inline-block"></span>
@@ -317,7 +317,7 @@ export default function Privacy() {
                             </div>
                         </section>
 
-                        {/* Updates to this policy - Moved to bottom as standard */}
+                        
                         <section className="pt-12 border-t border-white/10">
                             <h2 className="text-2xl font-medium text-white mb-4">Updates to This Privacy Policy</h2>
                             <p className="text-sm text-gray-400">

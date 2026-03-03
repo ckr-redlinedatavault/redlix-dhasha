@@ -16,7 +16,7 @@ export default function OurStory() {
         <main className={`${bricolage.className} bg-black min-h-screen text-white selection:bg-[#DAC291] selection:text-black antialiased`}>
             <Navbar />
 
-            {/* Hero Section */}
+            
             <section className="relative pt-32 pb-16 overflow-hidden bg-black">
                 <div className="max-w-6xl mx-auto px-6 relative z-10">
                     <div className="max-w-3xl">
@@ -37,7 +37,7 @@ export default function OurStory() {
                 </div>
             </section>
 
-            {/* Founders Section - Large Squares & Gold Background */}
+            
             <section className="py-20 bg-[#DAC291] text-black">
                 <div className="max-w-6xl mx-auto px-6">
                     <div className="max-w-2xl mb-12 border-l-2 border-black/20 ps-6">
@@ -46,7 +46,7 @@ export default function OurStory() {
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8">
-                        {/* Founder 1 */}
+                        
                         <div className="bg-black text-white p-4 rounded-3xl border border-black group">
                             <div className="aspect-square w-full bg-zinc-900 rounded-2xl mb-8 overflow-hidden">
                                 <img
@@ -64,7 +64,7 @@ export default function OurStory() {
                             </div>
                         </div>
 
-                        {/* Founder 2 */}
+                        
                         <div className="bg-black text-white p-4 rounded-3xl border border-black group">
                             <div className="aspect-square w-full bg-zinc-900 rounded-2xl mb-8 overflow-hidden">
                                 <img
@@ -85,7 +85,7 @@ export default function OurStory() {
                 </div>
             </section>
 
-            {/* Mission & Values - Gold Box Layout */}
+            
             <section className="py-20 bg-black">
                 <div className="max-w-6xl mx-auto px-6">
                     <div className="grid md:grid-cols-2 gap-6">
@@ -107,7 +107,7 @@ export default function OurStory() {
                 </div>
             </section>
 
-            {/* Expertise - Gold Box Grid */}
+            
             <section className="py-20 border-y border-white/5 bg-zinc-950">
                 <div className="max-w-6xl mx-auto px-6">
                     <h2 className="text-3xl font-normal tracking-tight mb-12">Technical expertise</h2>
@@ -128,7 +128,7 @@ export default function OurStory() {
                 </div>
             </section>
 
-            {/* AI Advantage - Massive Gold Box */}
+            
             <section className="py-20">
                 <div className="max-w-6xl mx-auto px-6">
                     <div className="p-10 md:p-16 rounded-[3rem] border border-[#DAC291] bg-[#DAC291]/5 relative overflow-hidden">
@@ -159,7 +159,7 @@ export default function OurStory() {
                 </div>
             </section>
 
-            {/* Final CTA */}
+            
             <section className="py-24 bg-black border-t border-white/5">
                 <div className="max-w-6xl mx-auto px-6">
                     <div className="max-w-2xl p-10 border border-[#DAC291]/20 rounded-3xl bg-zinc-950">

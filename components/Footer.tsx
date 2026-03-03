@@ -15,14 +15,14 @@ export default function Footer() {
 
     return (
         <footer className={`${bricolage.className} text-black`}>
-            {/* Main Footer Content with Gradient */}
+            
             <div className="bg-gradient-to-r from-[#B89E6C] via-[#DAC291] to-[#EAD7B0] pt-16 pb-12 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
 
-                    {/* Top Section: Large Logo & Description */}
+                    
                     <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 mb-12">
                         <div className="col-span-1 lg:col-span-2">
-                            {/* Large External Logo - brightness-0 forces it to be solid black */}
+                            
                             <div className="mb-8">
                                 <img
                                     src="https://res.cloudinary.com/dsqqrpzfl/image/upload/v1769863861/WhatsApp_Image_2026-01-31_at_18.18.05-removebg-preview_mqautr.png"
@@ -54,7 +54,7 @@ export default function Footer() {
                             </div>
                         </div>
 
-                        {/* Links Groups */}
+                        
                         <div className="grid grid-cols-2 md:grid-cols-3 col-span-1 lg:col-span-3 gap-12">
                             <div>
                                 <h3 className="text-black text-[10px] font-black uppercase tracking-[0.3em] mb-8 opacity-40">Resources</h3>
@@ -91,7 +91,7 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Copyright Integrated in Main Footer */}
+                    
                     <div className="pt-12 border-t border-black/5 flex flex-col items-center">
                         <p className="text-[10px] text-black/40 tracking-[0.3em] uppercase font-black text-center">
                             &copy; {currentYear} Dhasha Media. All Rights Reserved.
@@ -99,7 +99,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Watermark */}
+                
                 <div className="absolute bottom-0 left-0 w-full overflow-hidden pointer-events-none opacity-5">
                     <span className="text-[12vw] leading-none font-black text-black whitespace-nowrap block text-center transform translate-y-1/4 select-none">
                         DHASHA MEDIA

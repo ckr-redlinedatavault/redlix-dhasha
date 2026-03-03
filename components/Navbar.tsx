@@ -26,7 +26,7 @@ export default function Navbar() {
     <nav className={`${bricolage.className} fixed w-full z-50 border-b border-black/5 shadow-md bg-gradient-to-r from-[#B89E6C] via-[#DAC291] to-[#EAD7B0]`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
+          
           <div className="flex-shrink-0 flex items-center">
             <Link href="/">
               <img
@@ -120,7 +120,7 @@ export default function Navbar() {
       {showAppModal && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center px-4 bg-black/60 backdrop-blur-sm" onClick={() => setShowAppModal(false)}>
           <div className="bg-[#DAC291] w-full max-w-md rounded-[2rem] p-8 text-center relative border border-white/20 shadow-2xl overflow-hidden" onClick={e => e.stopPropagation()}>
-            {/* Close Button */}
+            
             <button onClick={() => setShowAppModal(false)} className="absolute top-4 right-4 p-2 bg-black/10 rounded-full hover:bg-black/20 transition-colors">
               <X size={20} className="text-black" />
             </button>

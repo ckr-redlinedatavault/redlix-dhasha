@@ -43,7 +43,9 @@ export default function HeroWithCards() {
     const middleIndex = Math.floor(cards.length / 2);
     const videoRefs = useRef<{ [key: string]: HTMLVideoElement }>({});
 
-    // Swipe/Drag State
+
+
+
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
     const [dragDistance, setDragDistance] = useState(0);
