@@ -5,8 +5,9 @@ import {
     ArrowLeft, ArrowRight, MoveRight
 } from 'lucide-react';
 import Link from 'next/link';
-import { Bricolage_Grotesque } from 'next/font/google';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
+import { Bricolage_Grotesque } from 'next/font/google';
 
 const bricolage = Bricolage_Grotesque({
     subsets: ['latin'],
@@ -127,15 +128,19 @@ export default function PowerhouseSlider() {
 
                                 <div className={`lg:col-span-5 flex flex-col items-center justify-center relative overflow-hidden ${index === 1 || index === 2 ? 'p-0' : 'p-8 md:p-12'}`}>
                                     <div className={`relative z-10 w-full h-full flex items-center justify-center ${index === 1 || index === 2 ? 'absolute inset-0' : ''}`}>
-                                        <img
+                                        <Image
                                             src={services[index].image}
                                             alt={services[index].title}
+                                            fill={index === 1 || index === 2}
+                                            width={index === 1 || index === 2 ? undefined : 600}
+                                            height={index === 1 || index === 2 ? undefined : 600}
                                             className={`drop-shadow-2xl ${index === 0 ? 'w-full h-auto max-h-[250px] object-contain scale-[1.6]' :
                                                 index === 1 ? 'w-full h-full object-cover grayscale' :
                                                     index === 2 ? 'w-full h-full object-cover' :
                                                         index === 7 ? 'w-full h-auto max-h-[350px] object-contain scale-[1.3]' :
                                                             'w-full h-auto max-h-[250px] object-contain scale-110'
                                                 }`}
+                                            priority={index === 0}
                                         />
                                     </div>
                                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(218,194,145,0.08)_0%,transparent_70%)]" />

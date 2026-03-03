@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Menu, X, ChevronRight, Smartphone, Mail } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Bricolage_Grotesque } from 'next/font/google';
 
 const bricolage = Bricolage_Grotesque({
@@ -26,13 +27,16 @@ export default function Navbar() {
     <nav className={`${bricolage.className} fixed w-full z-50 border-b border-black/5 shadow-md bg-gradient-to-r from-[#B89E6C] via-[#DAC291] to-[#EAD7B0]`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          
+
           <div className="flex-shrink-0 flex items-center">
             <Link href="/">
-              <img
+              <Image
                 src="https://res.cloudinary.com/dsqqrpzfl/image/upload/v1769863861/WhatsApp_Image_2026-01-31_at_18.18.05-removebg-preview_mqautr.png"
                 alt="Dhasha Media - Professional 10-in-1 Media Agency Logo"
+                width={200}
+                height={64}
                 className="h-16 w-auto brightness-[0.2] contrast-125"
+                priority
               />
             </Link>
           </div>
@@ -120,7 +124,7 @@ export default function Navbar() {
       {showAppModal && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center px-4 bg-black/60 backdrop-blur-sm" onClick={() => setShowAppModal(false)}>
           <div className="bg-[#DAC291] w-full max-w-md rounded-[2rem] p-8 text-center relative border border-white/20 shadow-2xl overflow-hidden" onClick={e => e.stopPropagation()}>
-            
+
             <button onClick={() => setShowAppModal(false)} className="absolute top-4 right-4 p-2 bg-black/10 rounded-full hover:bg-black/20 transition-colors">
               <X size={20} className="text-black" />
             </button>

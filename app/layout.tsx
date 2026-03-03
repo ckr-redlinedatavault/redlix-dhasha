@@ -15,12 +15,21 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dhashamedia.com"),
-  title: "Dhasha Media | #1 Media Agency & Creator Ecosystem",
-  description: "Dhasha Media is a 10-in-1 media powerhouse offering professional photography, videography, branding, and a dedicated creator platform. The new standard in digital media production.",
-  keywords: ["media agency", "photography studio", "videography services", "branding agency", "creator platform", "digital media production", "Dhasha Media", "content creation", "social media marketing"],
-  authors: [{ name: "Dhasha Media Team" }],
+  title: {
+    default: "Dhasha Media | #1 Media Agency & Creator Ecosystem",
+    template: "%s | Dhasha Media"
+  },
+  description: "Dhasha Media is a 10-in-1 media powerhouse offering professional photography, videography, branding, and a dedicated creator platform. We specialize in cinematic storytelling and rapid content delivery.",
+  keywords: [
+    "media agency", "photography studio Hyderabad", "cinematic videography",
+    "branding agency India", "creator ecosystem", "digital media production",
+    "Dhasha Media", "content creation", "social media marketing", "reels production",
+    "influencer marketing", "video editing services"
+  ],
+  authors: [{ name: "Dhasha Media", url: "https://dhashamedia.com" }],
   creator: "Dhasha Media",
   publisher: "Dhasha Media",
+  category: "Media Production",
   formatDetection: {
     email: false,
     address: false,
@@ -36,7 +45,7 @@ export const metadata: Metadata = {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Dhasha Media Logo",
+        alt: "Dhasha Media Logo - Digital Media Production Agency",
       },
     ],
     locale: "en_US",
@@ -47,6 +56,7 @@ export const metadata: Metadata = {
     title: "Dhasha Media | #1 Media Agency & Creator Ecosystem",
     description: "The New Standard in Digital Media. 10-in-1 Media Powerhouse for Creators and Businesses.",
     images: ["/logo.png"],
+    creator: "@dhashamedia",
   },
   robots: {
     index: true,
@@ -54,9 +64,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
   alternates: {

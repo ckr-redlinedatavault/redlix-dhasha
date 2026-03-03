@@ -1,6 +1,7 @@
 'use client';
 
-import { Percent, Smartphone, Apple, Play } from 'lucide-react';
+import { Percent, Smartphone } from 'lucide-react';
+import Image from 'next/image';
 import { Bricolage_Grotesque } from 'next/font/google';
 import { motion } from 'framer-motion';
 
@@ -12,7 +13,7 @@ const bricolage = Bricolage_Grotesque({
 export default function AppSection() {
     return (
         <section className={`${bricolage.className} py-12 bg-[#050505] overflow-hidden relative`}>
-        
+
             <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[400px] h-[400px] bg-[#DAC291]/5 blur-[100px] rounded-full pointer-events-none" />
 
             <div className="max-w-6xl mx-auto px-6 relative z-10">
@@ -55,16 +56,20 @@ export default function AppSection() {
 
                                 <div className="space-y-2">
                                     <div className="flex gap-3 items-center">
-                                        
-                                        <img
+
+                                        <Image
                                             src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
                                             alt="Apple"
-                                            className="h-4 w-auto invert" 
+                                            width={16}
+                                            height={16}
+                                            className="h-4 w-auto invert"
                                         />
-                                       
-                                        <img
+
+                                        <Image
                                             src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg"
                                             alt="Google Play"
+                                            width={16}
+                                            height={16}
                                             className="h-4 w-auto"
                                         />
                                     </div>
@@ -73,41 +78,46 @@ export default function AppSection() {
                             </div>
                         </div>
 
-                      
+
                         <div className="mt-8 flex items-center gap-4">
-                            <img
+                            <Image
                                 src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
                                 alt="App Store"
+                                width={120}
+                                height={40}
                                 className="h-8 md:h-9 w-auto grayscale opacity-40"
                             />
-                            <img
+                            <Image
                                 src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                                 alt="Play Store"
+                                width={135}
+                                height={40}
                                 className="h-8 md:h-9 w-auto grayscale opacity-40"
                             />
                         </div>
                     </div>
 
-                 
+
                     <div className="relative flex justify-center items-center mt-8 lg:mt-0">
                         <div className="absolute w-[70%] aspect-square bg-[#DAC291]/5 blur-[80px] rounded-full pointer-events-none" />
 
                         <div className="relative flex items-center justify-center w-full">
-                
+
                             <motion.div
                                 initial={{ x: -10, opacity: 0, rotate: -4 }}
                                 whileInView={{ x: -30, opacity: 0.15, rotate: -8 }}
                                 transition={{ duration: 1 }}
                                 className="absolute z-10 w-[180px] md:w-[220px] aspect-[9/19] bg-[#111] rounded-[2.2rem] border-[6px] border-white/5 shadow-2xl overflow-hidden pointer-events-none"
                             >
-                                <img
+                                <Image
                                     src="https://res.cloudinary.com/dsqqrpzfl/image/upload/v1769871418/Screenshot_2026-01-31_at_20.26.06_hj6hdn.png"
                                     alt="UI BG"
+                                    fill
                                     className="w-full h-full object-cover grayscale opacity-50"
                                 />
                             </motion.div>
 
-                
+
                             <motion.div
                                 initial={{ y: 20, opacity: 0, rotate: 2 }}
                                 whileInView={{ y: 0, opacity: 1, rotate: 4 }}
@@ -115,9 +125,10 @@ export default function AppSection() {
                                 className="relative z-20 w-[200px] md:w-[240px] aspect-[9/19] bg-[#0A0A0A] rounded-[2.2rem] border-[8px] border-white/10 shadow-[0_0_50px_rgba(218,194,145,0.1)] overflow-hidden"
                             >
                                 <div className="absolute inset-0 bg-gradient-to-tr from-white/5 via-transparent to-transparent z-30" />
-                                <img
+                                <Image
                                     src="https://res.cloudinary.com/dsqqrpzfl/image/upload/v1769871557/Screenshot_2026-01-31_at_20.29.05_e26wjv.png"
                                     alt="Dhasha App Hero"
+                                    fill
                                     className="w-full h-full object-cover"
                                 />
                             </motion.div>

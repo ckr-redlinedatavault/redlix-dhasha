@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Bricolage_Grotesque } from 'next/font/google';
 
 const bricolage = Bricolage_Grotesque({
@@ -47,10 +48,12 @@ export default function SocialProof() {
                             key={brand.name}
                             className="flex-1 flex items-center justify-center group"
                         >
-                            <img
+                            <Image
                                 src={brand.logoUrl}
                                 alt={brand.name}
-                                className={`w-auto object-contain transition-all duration-500 filter brightness-0 opacity-70 group-hover:filter-none group-hover:opacity-100 group-hover:scale-105
+                                width={200}
+                                height={80}
+                                className={`w-auto h-auto object-contain transition-all duration-500 filter brightness-0 opacity-70 group-hover:filter-none group-hover:opacity-100 group-hover:scale-105
                                 ${brand.name === 'Emmadi' || brand.name === "Dr. Sheth's"
                                         ? 'max-h-[40px] sm:max-h-[80px] md:max-h-[120px] lg:max-h-[150px]'
                                         : 'max-h-[25px] sm:max-h-[40px] md:max-h-[60px] lg:max-h-[80px]'}`}

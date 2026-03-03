@@ -1,8 +1,12 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Blog | Dhasha Media - Content Creation Insights',
-    description: 'Stay updated with the latest trends in photography, videography, and digital branding with the Dhasha Media blog.',
+    title: 'Blog',
+    description: 'Insights from the digital media frontline. Tips on content strategy, videography trends, and creative growth from Dhasha Media experts.',
+    openGraph: {
+        title: 'Blog | Dhasha Media',
+        description: 'Read the latest insights from Dhasha Media.',
+    }
 };
 
 export default function BlogLayout({
